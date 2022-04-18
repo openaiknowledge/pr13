@@ -7,11 +7,7 @@
 struct EnvironmentDefault: Environment {
 
     let context: EnvironmentContext
-    
     let brain: Brain
     
-    let outerBrain: OuterBrain
-    
-
 }
 

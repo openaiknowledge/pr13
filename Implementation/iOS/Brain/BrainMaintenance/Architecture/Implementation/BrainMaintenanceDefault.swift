@@ -5,6 +5,6 @@
 //
 //  
 
-struct OuterBrainDefault: OuterBrain {
+struct BrainMaintenanceDefault: BrainMaintenance {
     let brain: Brain
 }

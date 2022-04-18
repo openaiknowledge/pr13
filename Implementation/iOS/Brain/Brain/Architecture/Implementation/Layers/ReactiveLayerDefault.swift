@@ -6,5 +6,10 @@
 
 struct ReactiveLayerDefault: ReactiveLayer {
     let context: BrainContext
+    var process = [Process]()
+    var activity = [Activity]()
+
+    let memoryLayer: MemoryLayer
+    let actionLayer: ActionLayer
     
 }

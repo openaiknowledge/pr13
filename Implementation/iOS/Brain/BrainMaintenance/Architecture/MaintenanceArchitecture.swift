@@ -5,8 +5,7 @@
 //
 //  Base protocols for implementing OuterBrain Architecture
 
-// MARK: 
-protocol OuterBrain {
-    var brain: Brain { get }
-    
+// MARK:
+protocol BrainMaintenance {
+    var brain: Brain { get }    
 }
