@@ -28,13 +28,9 @@
 		87595BDA2792F47E00BFE09C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCA2792F47E00BFE09C /* OpenSans-Regular.ttf */; };
 		87595BDB2792F47E00BFE09C /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCB2792F47E00BFE09C /* OpenSans-BoldItalic.ttf */; };
 		87595BDC2792F47E00BFE09C /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCC2792F47E00BFE09C /* OpenSans-CondBold.ttf */; };
-		87595BF12792F48A00BFE09C /* QuestionAnswerPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE42792F48A00BFE09C /* QuestionAnswerPresenterDefault.swift */; };
 		87595BF22792F48A00BFE09C /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE62792F48A00BFE09C /* QuestionAnswerViewController.swift */; };
 		87595BF32792F48A00BFE09C /* QuestionAnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87595BE72792F48A00BFE09C /* QuestionAnswerView.xib */; };
 		87595BF42792F48A00BFE09C /* QuestionAnswerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE92792F48A00BFE09C /* QuestionAnswerConfigurator.swift */; };
-		87595BF52792F48A00BFE09C /* QuestionAnswerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BEB2792F48A00BFE09C /* QuestionAnswerProtocols.swift */; };
-		87595BF62792F48A00BFE09C /* QuestionAnswerInteractorDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BED2792F48A00BFE09C /* QuestionAnswerInteractorDefault.swift */; };
-		87595BF72792F48A00BFE09C /* QuestionAnswerRouterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BEF2792F48A00BFE09C /* QuestionAnswerRouterDefault.swift */; };
 		87595BFF2792F69600BFE09C /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BFC2792F69600BFE09C /* AppModules.swift */; };
 		87595C042792F78700BFE09C /* MainRouterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C022792F78700BFE09C /* MainRouterDefault.swift */; };
 		87595C052792F78700BFE09C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C032792F78700BFE09C /* MainRouter.swift */; };
@@ -55,7 +51,6 @@
 		BD43A9CF279D798B009B21BB /* ConstantsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9CB279D798B009B21BB /* ConstantsStore.swift */; };
 		BD43A9D6279D8291009B21BB /* BrainContextDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D5279D8291009B21BB /* BrainContextDefault.swift */; };
 		BD43A9DA279D879B009B21BB /* BrainDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D9279D879B009B21BB /* BrainDefault.swift */; };
-		BD43A9DE279D8AAD009B21BB /* EnvironmentContextDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9DC279D8AAD009B21BB /* EnvironmentContextDefault.swift */; };
 		BD43A9DF279D8AAD009B21BB /* EnvironmentDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */; };
 		BD43A9E6279D8C6A009B21BB /* KnowledgeLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9E3279D8C6A009B21BB /* KnowledgeLayerDefault.swift */; };
 		BD700C8A280C18C600504EC9 /* MaintenanceArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C87280C18C600504EC9 /* MaintenanceArchitecture.swift */; };
@@ -71,6 +66,9 @@
 		BD9E1F7A27A873C8009CB532 /* ActionLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7427A873C8009CB532 /* ActionLayerDefault.swift */; };
 		BD9E1F7D27A8742F009CB532 /* ProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7C27A8742F009CB532 /* ProcessDefault.swift */; };
 		BD9E1F7F27A874D0009CB532 /* ProcessStatusDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7E27A874CF009CB532 /* ProcessStatusDefault.swift */; };
+		BDE64227281D59290037744C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE64226281D59290037744C /* BaseViewController.swift */; };
+		BDE6422B281D62070037744C /* SightSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422A281D62070037744C /* SightSystemDefault.swift */; };
+		BDE6422D281E6F620037744C /* BrainDataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422C281E6F620037744C /* BrainDataDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,13 +116,9 @@
 		87595BCA2792F47E00BFE09C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		87595BCB2792F47E00BFE09C /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		87595BCC2792F47E00BFE09C /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
-		87595BE42792F48A00BFE09C /* QuestionAnswerPresenterDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerPresenterDefault.swift; sourceTree = "<group>"; };
 		87595BE62792F48A00BFE09C /* QuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		87595BE72792F48A00BFE09C /* QuestionAnswerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionAnswerView.xib; sourceTree = "<group>"; };
 		87595BE92792F48A00BFE09C /* QuestionAnswerConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerConfigurator.swift; sourceTree = "<group>"; };
-		87595BEB2792F48A00BFE09C /* QuestionAnswerProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerProtocols.swift; sourceTree = "<group>"; };
-		87595BED2792F48A00BFE09C /* QuestionAnswerInteractorDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerInteractorDefault.swift; sourceTree = "<group>"; };
-		87595BEF2792F48A00BFE09C /* QuestionAnswerRouterDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswerRouterDefault.swift; sourceTree = "<group>"; };
 		87595BFC2792F69600BFE09C /* AppModules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
 		87595C022792F78700BFE09C /* MainRouterDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouterDefault.swift; sourceTree = "<group>"; };
 		87595C032792F78700BFE09C /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -145,7 +139,6 @@
 		BD43A9CB279D798B009B21BB /* ConstantsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsStore.swift; sourceTree = "<group>"; };
 		BD43A9D5279D8291009B21BB /* BrainContextDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainContextDefault.swift; sourceTree = "<group>"; };
 		BD43A9D9279D879B009B21BB /* BrainDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainDefault.swift; sourceTree = "<group>"; };
-		BD43A9DC279D8AAD009B21BB /* EnvironmentContextDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentContextDefault.swift; sourceTree = "<group>"; };
 		BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentDefault.swift; sourceTree = "<group>"; };
 		BD43A9E3279D8C6A009B21BB /* KnowledgeLayerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeLayerDefault.swift; sourceTree = "<group>"; };
 		BD700C87280C18C600504EC9 /* MaintenanceArchitecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceArchitecture.swift; sourceTree = "<group>"; };
@@ -161,6 +154,9 @@
 		BD9E1F7427A873C8009CB532 /* ActionLayerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionLayerDefault.swift; sourceTree = "<group>"; };
 		BD9E1F7C27A8742F009CB532 /* ProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessDefault.swift; sourceTree = "<group>"; };
 		BD9E1F7E27A874CF009CB532 /* ProcessStatusDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessStatusDefault.swift; sourceTree = "<group>"; };
+		BDE64226281D59290037744C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BDE6422A281D62070037744C /* SightSystemDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SightSystemDefault.swift; sourceTree = "<group>"; };
+		BDE6422C281E6F620037744C /* BrainDataDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainDataDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +187,7 @@
 		87595B742792F2EB00BFE09C = {
 			isa = PBXGroup;
 			children = (
+				BD43A9A5279D72A0009B21BB /* Dependency */,
 				87595B7F2792F2EB00BFE09C /* Brain */,
 				BD43A996279D6C51009B21BB /* Environment */,
 				BD700C83280C18C600504EC9 /* BrainMaintenance */,
@@ -217,7 +214,6 @@
 				BD43A9AA279D772D009B21BB /* Models? */,
 				87595BE12792F48A00BFE09C /* Features */,
 				87595BDE2792F48A00BFE09C /* Common */,
-				BD43A9A5279D72A0009B21BB /* Dependency */,
 				87595BF82792F49100BFE09C /* SupportingFiles */,
 				87595BB62792F47D00BFE09C /* Resource */,
 				87595B8E2792F2ED00BFE09C /* Info.plist */,
@@ -329,7 +325,6 @@
 		87595BDF2792F48A00BFE09C /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
-				87595C082794212900BFE09C /* VIPER */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -337,7 +332,6 @@
 		87595BE12792F48A00BFE09C /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				87595BE22792F48A00BFE09C /* QuestionAnswer */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -345,22 +339,10 @@
 		87595BE22792F48A00BFE09C /* QuestionAnswer */ = {
 			isa = PBXGroup;
 			children = (
-				87595BEA2792F48A00BFE09C /* Protocols */,
-				87595BE32792F48A00BFE09C /* Presenter */,
 				87595BE52792F48A00BFE09C /* View */,
 				87595BE82792F48A00BFE09C /* Configurator */,
-				87595BEC2792F48A00BFE09C /* Interactor */,
-				87595BEE2792F48A00BFE09C /* Router */,
 			);
 			path = QuestionAnswer;
-			sourceTree = "<group>";
-		};
-		87595BE32792F48A00BFE09C /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				87595BE42792F48A00BFE09C /* QuestionAnswerPresenterDefault.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		87595BE52792F48A00BFE09C /* View */ = {
@@ -378,30 +360,6 @@
 				87595BE92792F48A00BFE09C /* QuestionAnswerConfigurator.swift */,
 			);
 			path = Configurator;
-			sourceTree = "<group>";
-		};
-		87595BEA2792F48A00BFE09C /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				87595BEB2792F48A00BFE09C /* QuestionAnswerProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		87595BEC2792F48A00BFE09C /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				87595BED2792F48A00BFE09C /* QuestionAnswerInteractorDefault.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		87595BEE2792F48A00BFE09C /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				87595BEF2792F48A00BFE09C /* QuestionAnswerRouterDefault.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		87595BF82792F49100BFE09C /* SupportingFiles */ = {
@@ -455,6 +413,7 @@
 		BD43A999279D6D4F009B21BB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDE64225281D59170037744C /* View */,
 				BD43A99A279D6D4F009B21BB /* BaseComponents */,
 			);
 			path = Common;
@@ -463,6 +422,7 @@
 		BD43A99A279D6D4F009B21BB /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
+				87595C082794212900BFE09C /* VIPER */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -479,6 +439,7 @@
 		BD43A99D279D6D4F009B21BB /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				87595BE22792F48A00BFE09C /* QuestionAnswer */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -569,6 +530,7 @@
 				BD9E1F6E27A873C8009CB532 /* Layers */,
 				BD43A9D5279D8291009B21BB /* BrainContextDefault.swift */,
 				BD43A9D9279D879B009B21BB /* BrainDefault.swift */,
+				BDE6422C281E6F620037744C /* BrainDataDefault.swift */,
 				BD9E1F7E27A874CF009CB532 /* ProcessStatusDefault.swift */,
 				BD9E1F7C27A8742F009CB532 /* ProcessDefault.swift */,
 				BD88448627AAF90000F2CBFA /* KModelProcessDefault.swift */,
@@ -579,7 +541,7 @@
 		BD43A9DB279D8AAD009B21BB /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				BD43A9DC279D8AAD009B21BB /* EnvironmentContextDefault.swift */,
+				BDE6422A281D62070037744C /* SightSystemDefault.swift */,
 				BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */,
 			);
 			path = Implementation;
@@ -654,6 +616,14 @@
 				BD700C8D280C306100504EC9 /* PerceptionProcessDefault.swift */,
 			);
 			path = Process;
+			sourceTree = "<group>";
+		};
+		BDE64225281D59170037744C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE64226281D59290037744C /* BaseViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,22 +780,23 @@
 				87595C11279421F900BFE09C /* BrainArchitecture.swift in Sources */,
 				87595BF42792F48A00BFE09C /* QuestionAnswerConfigurator.swift in Sources */,
 				BD43A9CC279D798B009B21BB /* ConstantsStoreDefault.swift in Sources */,
-				87595BF62792F48A00BFE09C /* QuestionAnswerInteractorDefault.swift in Sources */,
 				87595B812792F2EB00BFE09C /* AppDelegate.swift in Sources */,
+				BDE6422D281E6F620037744C /* BrainDataDefault.swift in Sources */,
 				BD9E1F7827A873C8009CB532 /* ProactiveLayerDefault.swift in Sources */,
 				87595C052792F78700BFE09C /* MainRouter.swift in Sources */,
 				BD43A9AF279D772D009B21BB /* GenericError.swift in Sources */,
+				BDE64227281D59290037744C /* BaseViewController.swift in Sources */,
 				BD700C8A280C18C600504EC9 /* MaintenanceArchitecture.swift in Sources */,
 				BD9E1F7A27A873C8009CB532 /* ActionLayerDefault.swift in Sources */,
 				BD43A9A9279D72A0009B21BB /* DependencyFactory.swift in Sources */,
 				87595BF22792F48A00BFE09C /* QuestionAnswerViewController.swift in Sources */,
 				BD88448727AAF90000F2CBFA /* KModelProcessDefault.swift in Sources */,
 				BD43A9CF279D798B009B21BB /* ConstantsStore.swift in Sources */,
+				BDE6422B281D62070037744C /* SightSystemDefault.swift in Sources */,
 				87595BFF2792F69600BFE09C /* AppModules.swift in Sources */,
 				BD9E1F7527A873C8009CB532 /* LearningLayerDefault.swift in Sources */,
 				BD700C8B280C18C600504EC9 /* BrainMaintenanceDefault.swift in Sources */,
 				BD43A9C3279D773A009B21BB /* APIClientDefault.swift in Sources */,
-				BD43A9DE279D8AAD009B21BB /* EnvironmentContextDefault.swift in Sources */,
 				BD43A9C4279D773A009B21BB /* APIClient.swift in Sources */,
 				BD9E1F7927A873C8009CB532 /* MemoryLayerDefault .swift in Sources */,
 				BD9E1F7D27A8742F009CB532 /* ProcessDefault.swift in Sources */,
@@ -834,15 +805,12 @@
 				BD43A9CD279D798B009B21BB /* RuntimeVariables.swift in Sources */,
 				BD9E1F7627A873C8009CB532 /* ReactiveLayerDefault.swift in Sources */,
 				BD43A9C5279D773A009B21BB /* APIRoutable.swift in Sources */,
-				87595BF12792F48A00BFE09C /* QuestionAnswerPresenterDefault.swift in Sources */,
 				BD700C8E280C306100504EC9 /* PerceptionProcessDefault.swift in Sources */,
 				BD700C90280D772200504EC9 /* PerceptionLayer.swift in Sources */,
 				87595C0C2794212900BFE09C /* BaseViperProtocols.swift in Sources */,
 				87595C042792F78700BFE09C /* MainRouterDefault.swift in Sources */,
-				87595BF52792F48A00BFE09C /* QuestionAnswerProtocols.swift in Sources */,
 				87595B832792F2EB00BFE09C /* SceneDelegate.swift in Sources */,
 				BD9E1F7F27A874D0009CB532 /* ProcessStatusDefault.swift in Sources */,
-				87595BF72792F48A00BFE09C /* QuestionAnswerRouterDefault.swift in Sources */,
 				87595C132794253800BFE09C /* ProcessKModel.swift in Sources */,
 				BD43A9DA279D879B009B21BB /* BrainDefault.swift in Sources */,
 				BD43A9A8279D72A0009B21BB /* HasDependencies.swift in Sources */,

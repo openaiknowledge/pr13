@@ -9,7 +9,7 @@ class AppModules {
 
     // MARK: - Proposals
     class func createQuestionAnswerModule() -> UIViewController {
-        return QuestionAnswerConfigurator.createModule()
+        return QuestionAnswerConfigurator().createModule()
     }
     
 }

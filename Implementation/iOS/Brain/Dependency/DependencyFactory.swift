@@ -16,7 +16,7 @@ protocol DependencyFactory {
     func resolve() -> BrainMaintenance
 
 
-    // MARK: layers
+    // MARK: Brain
     func resolve() -> PerceptionLayer
     func resolve() -> ActionLayer
     func resolve() -> ReactiveLayer
@@ -24,7 +24,12 @@ protocol DependencyFactory {
     func resolve() -> LearningLayer
     func resolve() -> MemoryLayer
     func resolve() -> KnowledgeLayer
-    
+
+    // MARK: Environment
+    func resolve() -> SightInputController
+    func resolve() -> EventGenerator
+
+
     // MARK: others
     func resolve() -> ConstantsStore
     func resolve() -> APIClient
@@ -35,7 +40,7 @@ class DependencyFactoryDefault: DependencyFactory {
 
     // MARK: - main level
     open func resolve() -> Environment {
-        return  EnvironmentDefault(context: resolve(), brain: resolve())
+        return  EnvironmentDefault(sight: resolve(), context: resolve(), brain: resolve())
     }
     
     func resolve() -> EnvironmentContext {
@@ -54,7 +59,7 @@ class DependencyFactoryDefault: DependencyFactory {
         return BrainMaintenanceDefault(brain: resolve())
     }
 
-    // MARK: layers
+    // MARK: brain - layers
     func resolve() -> PerceptionLayer {
         /*
         let reactiveProcessKModel = ReactiveProcessKModelDefault()
@@ -86,6 +91,14 @@ class DependencyFactoryDefault: DependencyFactory {
         return KnowledgeLayerDefault(context: resolve(), proactiveLayer: resolve(), reactiveLayer: resolve())
     }
     
+    // MARK: Environment - systems
+    func resolve() -> SightInputController {
+        return SightInputControllerDefault(context: resolve(), eventGenerator: resolve())
+    }
+    
+    func resolve() -> EventGenerator {
+        return EventGeneratorDefault()
+    }
     
     // MARK: - Store
     open func resolve() -> ConstantsStore {

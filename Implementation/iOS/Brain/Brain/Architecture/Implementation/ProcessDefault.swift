@@ -21,12 +21,6 @@ extension ProcessDefault: Process {
         return SignalDefault(messages: [], processStatus: [])
     }
 }
-
-// MARK: - Event
-struct EventDefault {
-    var data: BrainData
-
-}
 // MARK: - Signal
 struct SignalDefault: Signal {
     var messages: [BrainData]

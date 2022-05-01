@@ -1,3 +1,8 @@
+//  QuestionAnswerProtocols.swift
+//  Brain
+//
+//  Created by Miguel Gutierrez on 10/01/2022
+//
 import UIKit
 
 class QuestionAnswerViewController: UIViewController {
@@ -5,7 +10,7 @@ class QuestionAnswerViewController: UIViewController {
     // MARK: - IBOutlets
 
     // MARK: - Properties
-	var presenter: QuestionAnswerPresenter?
+	var presenter: SightPresenter?
     
     // MARK: - Life Cycle
 	override func viewDidLoad() {
@@ -19,6 +24,6 @@ class QuestionAnswerViewController: UIViewController {
     }
 }
 
-extension QuestionAnswerViewController: QuestionAnswerView {
+extension QuestionAnswerViewController: SightView {
 
 }
