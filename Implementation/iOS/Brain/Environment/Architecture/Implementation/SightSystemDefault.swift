@@ -7,14 +7,44 @@
 import UIKit
 
 // MARK: - SightInputController
-class SightInputControllerDefault: SightInputController {
+class SightInputControllerDefault {
     let context: EnvironmentContext
     let eventGenerator: EventGenerator
+    let perceptionLayer: PerceptionLayer
     
-    init(context: EnvironmentContext, eventGenerator: EventGenerator) {
+    init(context: EnvironmentContext,
+         eventGenerator: EventGenerator,
+         perceptionLayer: PerceptionLayer) {
         self.context = context
         self.eventGenerator = eventGenerator
+        self.perceptionLayer = perceptionLayer
     }
+}
+// MARK: - SightInputController
+extension SightInputControllerDefault: SightInputController {
+
+    func input(data: BrainData) {
+        
+        let event = eventGenerator.generate(data: data)
+        perceptionLayer.event(event)
+
+    }
+    
+    func input(text: String) {
+        guard let data = text.data(using: BrainDataDefault.Constant.dataTypeConversion) else { return }
+        
+        let brainData = BrainDataDefault(type: .text, data: data)
+        input(data: brainData)
+        
+    }
+    
+    func input(image: Data) {
+        
+        let brainData = BrainDataDefault(type: .image, data: image)
+        input(data: brainData)
+
+    }
+    
 }
 
 // MARK: - SightViewController
@@ -23,21 +53,23 @@ class SightViewController: BaseViewController {
     
 }
 // MARK: - SightView
+/* Sight does not have output
 extension SightViewController: SightView {
-
 }
+ */
 // MARK: - SightPresenter
 class SightPresenterDefault {
     var inputController: SightInputController
-    
-    weak var view: SightView?
+
+// Sight does not have output
+//    weak var view: SightView?
     var interactor: SightInteractor?
     var router: SightRouter?
     
-    init(inputController: SightInputController, view: SightView?, interactor: SightInteractor?, router: SightRouter?
-    ) {
+    init(inputController: SightInputController,
+         interactor: SightInteractor?,
+         router: SightRouter?) {
         self.inputController = inputController
-        self.view = view
         self.interactor = interactor
         self.router = router
     }

@@ -3,12 +3,23 @@
 //
 //  Created by Miguel Gutierrez on 10/01/2022
 //
-// TODO
-struct ActionLayerDefault: ActionLayer {
+// Default implementation of ActionLayer
+class ActionLayerDefault {
     let context: BrainContext
-    var process = [Process]()
+    var processes = [Process]()
+    var activities = [Activity]()
+
+    weak var environment: Environment?
     
-    var activity = [Activity]()
-    
-    let environment: Environment
+    init(context: BrainContext) {
+        self.context = context
+    }
 }
+// MARK: - ActionLayer
+extension ActionLayerDefault: ActionLayer {
+    func signal(_ signal: Signal) {
+//        TODO
+    }
+    
+}
+

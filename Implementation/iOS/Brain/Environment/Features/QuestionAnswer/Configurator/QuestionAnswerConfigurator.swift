@@ -9,22 +9,19 @@ class QuestionAnswerConfigurator: HasDependencies {
 
     func createModule() -> UIViewController  {
 
-        let inputController: SightInputController = SightInputControllerDefault(context: dependencies.resolve(), eventGenerator: dependencies.resolve())
-        
+        let inputController: SightInputController = dependencies.resolve()
         let view = QuestionAnswerViewController()
         let interactor: SightInteractorDefault = SightInteractorDefault()
         let router: SightRouter = SightRouterDefault(mainRouter: MainRouterDefault(parentVC: view))
-
         
         let presenter: SightPresenterDefault = SightPresenterDefault(
             inputController: inputController,
-            view: view,
             interactor: interactor,
             router: router)
         
         view.presenter = presenter
         
-        presenter.view = view
+//        presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
         interactor.presenter = presenter

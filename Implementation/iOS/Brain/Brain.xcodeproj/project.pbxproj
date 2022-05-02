@@ -66,6 +66,8 @@
 		BD9E1F7A27A873C8009CB532 /* ActionLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7427A873C8009CB532 /* ActionLayerDefault.swift */; };
 		BD9E1F7D27A8742F009CB532 /* ProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7C27A8742F009CB532 /* ProcessDefault.swift */; };
 		BD9E1F7F27A874D0009CB532 /* ProcessStatusDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7E27A874CF009CB532 /* ProcessStatusDefault.swift */; };
+		BDB0DF47281FDB6D001BFE5B /* DependencyFactoryDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */; };
+		BDB0DF4B281FEE89001BFE5B /* Process+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */; };
 		BDE64227281D59290037744C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE64226281D59290037744C /* BaseViewController.swift */; };
 		BDE6422B281D62070037744C /* SightSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422A281D62070037744C /* SightSystemDefault.swift */; };
 		BDE6422D281E6F620037744C /* BrainDataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422C281E6F620037744C /* BrainDataDefault.swift */; };
@@ -154,6 +156,8 @@
 		BD9E1F7427A873C8009CB532 /* ActionLayerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionLayerDefault.swift; sourceTree = "<group>"; };
 		BD9E1F7C27A8742F009CB532 /* ProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessDefault.swift; sourceTree = "<group>"; };
 		BD9E1F7E27A874CF009CB532 /* ProcessStatusDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessStatusDefault.swift; sourceTree = "<group>"; };
+		BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyFactoryDefault.swift; sourceTree = "<group>"; };
+		BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Process+extension.swift"; sourceTree = "<group>"; };
 		BDE64226281D59290037744C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDE6422A281D62070037744C /* SightSystemDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SightSystemDefault.swift; sourceTree = "<group>"; };
 		BDE6422C281E6F620037744C /* BrainDataDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainDataDefault.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		87595B742792F2EB00BFE09C = {
 			isa = PBXGroup;
 			children = (
+				BDB0DF4C281FF0DD001BFE5B /* Common */,
 				BD43A9A5279D72A0009B21BB /* Dependency */,
 				87595B7F2792F2EB00BFE09C /* Brain */,
 				BD43A996279D6C51009B21BB /* Environment */,
@@ -447,6 +452,7 @@
 		BD43A9A5279D72A0009B21BB /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				BDB0DF45281FDB6D001BFE5B /* Implementation */,
 				BD43A9A6279D72A0009B21BB /* HasDependencies.swift */,
 				BD43A9A7279D72A0009B21BB /* DependencyFactory.swift */,
 			);
@@ -613,9 +619,33 @@
 		BD9E1F7B27A8742F009CB532 /* Process */ = {
 			isa = PBXGroup;
 			children = (
+				BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */,
 				BD700C8D280C306100504EC9 /* PerceptionProcessDefault.swift */,
 			);
 			path = Process;
+			sourceTree = "<group>";
+		};
+		BDB0DF45281FDB6D001BFE5B /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		BDB0DF4C281FF0DD001BFE5B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BDB0DF4D281FF0DD001BFE5B /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BDB0DF4D281FF0DD001BFE5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BDE64225281D59170037744C /* View */ = {
@@ -785,6 +815,7 @@
 				BD9E1F7827A873C8009CB532 /* ProactiveLayerDefault.swift in Sources */,
 				87595C052792F78700BFE09C /* MainRouter.swift in Sources */,
 				BD43A9AF279D772D009B21BB /* GenericError.swift in Sources */,
+				BDB0DF47281FDB6D001BFE5B /* DependencyFactoryDefault.swift in Sources */,
 				BDE64227281D59290037744C /* BaseViewController.swift in Sources */,
 				BD700C8A280C18C600504EC9 /* MaintenanceArchitecture.swift in Sources */,
 				BD9E1F7A27A873C8009CB532 /* ActionLayerDefault.swift in Sources */,
@@ -812,6 +843,7 @@
 				87595B832792F2EB00BFE09C /* SceneDelegate.swift in Sources */,
 				BD9E1F7F27A874D0009CB532 /* ProcessStatusDefault.swift in Sources */,
 				87595C132794253800BFE09C /* ProcessKModel.swift in Sources */,
+				BDB0DF4B281FEE89001BFE5B /* Process+extension.swift in Sources */,
 				BD43A9DA279D879B009B21BB /* BrainDefault.swift in Sources */,
 				BD43A9A8279D72A0009B21BB /* HasDependencies.swift in Sources */,
 			);

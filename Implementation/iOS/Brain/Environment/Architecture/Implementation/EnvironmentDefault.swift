@@ -8,12 +8,19 @@
 import UIKit
 
 // MARK: - Environment
-struct EnvironmentDefault: Environment {
+class EnvironmentDefault: Environment {
     var sight: SightInputController    
 
     let context: EnvironmentContext
-    let brain: Brain
-    
+    unowned var perceptionLayer: PerceptionLayer
+
+    init(sight: SightInputController,
+         context: EnvironmentContext,
+         perceptionLayer: PerceptionLayer) {
+        self.sight = sight
+        self.context = context
+        self.perceptionLayer = perceptionLayer
+    }
 }
 
 // MARK: - EnvironmentContext
@@ -22,21 +29,20 @@ struct EnvironmentContextDefault: EnvironmentContext {
 }
 
 // MARK: - Event
-class EventDefault: Event {
-    var date: Date
-    
-    var messages = [BrainData]()
-    
-    var processStatus = [ProcessStatus]()
+struct EventDefault: Event {
+    let date: Date
+    let signal: Signal
 
-    init(date: Date) {
+    init(data: BrainData, date: Date) {
+        self.signal = SignalDefault(messages: [data], processStatus: [])
         self.date = date
     }
 }
 
 // MARK: - EventGenerator
 class EventGeneratorDefault: EventGenerator {
-    func generate() -> Event {
-        return EventDefault(date: Date())
+
+    func generate(data: BrainData) -> Event {
+        return EventDefault(data: data, date: Date())
     }
 }

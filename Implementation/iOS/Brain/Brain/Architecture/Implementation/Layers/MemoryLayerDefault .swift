@@ -3,12 +3,25 @@
 //
 //  Created by Miguel Gutierrez on 10/01/2022
 //
-// TODO
-struct MemoryLayerDefault: MemoryLayer {
+// Default implementation of MemoryLayer
+class MemoryLayerDefault {
     let context: BrainContext
-    var process = [Process]()
-    var activity = [Activity]()
+    var processes = [Process]()
+    var activities = [Activity]()
 
     let knowledgeLayer: KnowledgeLayer
-
+    
+    init(context: BrainContext,
+         knowledgeLayer: KnowledgeLayer) {
+        self.context = context
+        self.knowledgeLayer = knowledgeLayer
+    }
 }
+// MARK: - MemoryLayer
+extension MemoryLayerDefault: MemoryLayer {
+    func signal(_ signal: Signal) {
+//        TODO
+    }
+    
+}
+

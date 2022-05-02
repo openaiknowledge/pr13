@@ -5,8 +5,6 @@
 //
 //  Base protocols for implementing Brain Architecture
 
-import SwiftUI
-
 // MARK: - brain
 protocol Brain {
     var perceptionLayer: PerceptionLayer { get }
@@ -31,12 +29,15 @@ protocol Activity {
 // MARK: - Layers
 protocol Layer {
     var context: BrainContext { get }
-    var process: [Process] { get } // processes to execute in the layer. Normally will be one
-    var activity: [Activity] { get }  // activities to implement in the layer
+    var processes: [Process] { get } // processes to execute in the layer. Normally will be one
+    var activities: [Activity] { get }  // activities to implement in the layer
 
+    // functions
+    func signal(_ signal: Signal)
 }
+
 protocol ActionLayer: Layer {
-    var environment: Environment { get }
+    var environment: Environment? { get }
 }
 
 protocol ReactiveLayer: Layer {
@@ -65,8 +66,8 @@ protocol MemoryLayer: Layer {
 
 protocol KnowledgeLayer: Layer {
     // access to other Layers
-    var proactiveLayer: ProactiveLayer { get }
-    var reactiveLayer: ReactiveLayer { get }
+    var proactiveLayer: ProactiveLayer! { get }
+    var reactiveLayer: ReactiveLayer! { get }
 
 }
 
@@ -102,6 +103,8 @@ protocol LogicModel: KModel {
 
 // MARK: - Process
 protocol Process {
+    // where execute the process
+    var queueName: String { get }
     
     // models used to model the process
     var model: ProcessModel { get } // model of the process
@@ -116,18 +119,9 @@ protocol Process {
     var status: ProcessStatus { get }
 
     // execute activities in order
-    func exec(signal: Signal) -> Signal
+    func exec(signal: Signal)
 }
-// MARK: default implementation of exec
-extension Process {
-    func exec(signal: Signal) -> Signal {
-        var input = signal
-        activities.forEach {
-            input = $0.exec(signal: input)
-        }
-        return input
-    }
-}
+
 protocol ProcessStatus {
     
 }

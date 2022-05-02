@@ -8,23 +8,14 @@
 import Foundation  // Date
 
 // MARK: Environment
-protocol Environment {
+protocol Environment: AnyObject {
     var context: EnvironmentContext { get }
 
     // Systems
     var sight: SightInputController { get }
 
-
-    // access to others
-    var brain: Brain { get }
+    // access to layer
     var perceptionLayer: PerceptionLayer { get }
-}
-
-// MARK: general extension
-extension Environment {
-    var perceptionLayer: PerceptionLayer {
-        return brain.perceptionLayer
-    }
 }
 
 // MARK: - EnvironmentContext
@@ -35,8 +26,14 @@ protocol EnvironmentContext: Context {
 
 // MARK: - System Controller
 protocol SystemInputController {
+    // Data
     var context: EnvironmentContext { get }
     var eventGenerator: EventGenerator  { get }
+    var perceptionLayer: PerceptionLayer  { get }
+
+    // functions
+    func input(data: BrainData)
+    
 }
 protocol SystemOutputController {
     var context: EnvironmentContext { get }
@@ -44,12 +41,13 @@ protocol SystemOutputController {
 }
 
 // MARK: - Event
-protocol Event: Signal {
+protocol Event {
     var date: Date  { get }
+    var signal: Signal { get }
 }
 
 protocol EventGenerator {
-    func generate() -> Event
+    func generate(data: BrainData) -> Event
 }
 
 protocol SignalMapper {
@@ -79,5 +77,6 @@ protocol SightRouter: Router {
 }
 
 protocol SightInputController: SystemInputController {
-    
+    func input(text: String)
+    func input(image: Data)
 }

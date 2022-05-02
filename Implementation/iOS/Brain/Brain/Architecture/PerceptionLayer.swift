@@ -5,12 +5,13 @@
 //
 //  Base protocols for Perception layer
 
-import SwiftUI
-
-protocol PerceptionLayer: Layer {
+protocol PerceptionLayer: Layer, AnyObject {
     // MARK: access to other Layers
     var reactiveLayer: ReactiveLayer { get }
     var memoryLayer: MemoryLayer { get }
+    
+    // functions
+    func event(_ event: Event)
 }
 
 // MARK: - activity

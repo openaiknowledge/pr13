@@ -21,10 +21,11 @@ class PerceptionProcessDefault {
     }
     
 }
-// MARK: - public functions
+// MARK: - Process
 extension PerceptionProcessDefault: Process {
-
+    
 }
+
 // MARK: - needed implementations
 struct PerceptionProcessModelDefault: ProcessModel {
     
