@@ -12,57 +12,118 @@
 class DependencyFactoryDefault {
     
     // Brain
-    private lazy var brainContext: BrainContext = {
-        return  BrainContextDefault()
-    }()
+    private let brainContext: BrainContext
+    private let brain: Brain
+    
+    // Environment
+    private let environmentContext: EnvironmentContext
+    private let environment: Environment
 
-    private lazy var brain: Brain = {
-        let context: BrainContext = resolve()
-        // layers
-        let knowledgeLayer = KnowledgeLayerDefault(context: resolve())
-        let memoryLayer = MemoryLayerDefault(context: resolve(), knowledgeLayer: knowledgeLayer)
-        let actionLayer = ActionLayerDefault(context: resolve())
-        let reactiveLayer = ReactiveLayerDefault(context: resolve(), memoryLayer: memoryLayer, actionLayer: actionLayer)
-        let perceptionLayer = PerceptionLayerDefault(context: resolve(), reactiveLayer: reactiveLayer, memoryLayer: memoryLayer)
-        let proactiveLayer = ProactiveLayerDefault(context: resolve(), memoryLayer: memoryLayer, actionLayer: actionLayer)
-        let learningLayer = LearningLayerDefault(context: resolve(), knowledgeLayer: knowledgeLayer)
+    // Maintenance
+    private let brainMaintenance: BrainMaintenance
+
+    init(brainContext: BrainContext,
+         brain: Brain,
+         environmentContext: EnvironmentContext,
+         environment: Environment,
+         brainMaintenance: BrainMaintenance) {
+        self.brainContext = brainContext
+        self.brain = brain
+        self.environmentContext = environmentContext
+        self.environment = environment
+        self.brainMaintenance = brainMaintenance
+    }
+}
+// MARK: - build
+extension DependencyFactoryDefault {
+    static func build() -> DependencyFactoryDefault {
+        let brainContext = BrainContextDefault()
+        let brain = buildBrain(brainContext: brainContext)
+        let environmentContext = EnvironmentContextDefault()
         
+        let environment = buildEnvironment(
+            with: environmentContext,
+            perceptionLayer: brain.perceptionLayer)
+        
+        if let actionLayer = brain.actionLayer as? ActionLayerDefault {
+            actionLayer.environment = environment
+        }
+        
+        let maintenance = buildMaintenance(with: brain)
+        
+        return DependencyFactoryDefault(brainContext: brainContext, brain: brain, environmentContext: environmentContext, environment: environment, brainMaintenance: maintenance)
+    }
+}
+// MARK: - private build helper functions
+private extension DependencyFactoryDefault {
+    static func buildBrain(brainContext: BrainContext) -> Brain {
+        // layers
+        let knowledgeLayer = KnowledgeLayerDefault(
+            context: brainContext)
+        
+        let memoryLayer = MemoryLayerDefault(
+            context: brainContext,
+            knowledgeLayer: knowledgeLayer)
+        
+        let actionLayer = ActionLayerDefault(
+            context: brainContext)
+        
+        let reactiveLayer = ReactiveLayerDefault(
+            context: brainContext,
+            memoryLayer: memoryLayer,
+            actionLayer: actionLayer)
+        
+        let perceptionLayer = PerceptionLayerDefault(
+            context: brainContext,
+            reactiveLayer: reactiveLayer,
+            memoryLayer: memoryLayer)
+        
+        let proactiveLayer = ProactiveLayerDefault(
+            context: brainContext,
+            memoryLayer: memoryLayer,
+            actionLayer: actionLayer)
+        
+        let learningLayer = LearningLayerDefault(
+            context: brainContext,
+            knowledgeLayer: knowledgeLayer)
+            
         // inject other layers in knowledgeLayer
         knowledgeLayer.reactiveLayer = reactiveLayer
         knowledgeLayer.proactiveLayer = proactiveLayer
-        
+            
         return BrainDefault(perceptionLayer: perceptionLayer,
-                            actionLayer: actionLayer,
-                            reactiveLayer: reactiveLayer,
-                            proactiveLayer: proactiveLayer,
-                            learningLayer: learningLayer,
-                            memoryLayer: memoryLayer,
-                            knowledgeLayer: knowledgeLayer,
-                            context: resolve())
-    }()
-    
-    // Environment
-    private lazy var environment: Environment = {
-        let environment = EnvironmentDefault(sight: resolve(),
-                                  context: resolve(),
-                                  perceptionLayer: brain.perceptionLayer)
+                                actionLayer: actionLayer,
+                                reactiveLayer: reactiveLayer,
+                                proactiveLayer: proactiveLayer,
+                                learningLayer: learningLayer,
+                                memoryLayer: memoryLayer,
+                                knowledgeLayer: knowledgeLayer,
+                                context: brainContext)
+
+    }
+
+    static func buildEnvironment(with
+                    environmentContext: EnvironmentContext,
+                    perceptionLayer: PerceptionLayer) -> Environment {
+        let eventGenerator = EventGeneratorDefault()
         
-        if var actionLayer = brain.actionLayer as? ActionLayerDefault {
-            actionLayer.environment = environment
-        }
+        let sight = SightInputControllerDefault(
+            context: environmentContext,
+            eventGenerator: eventGenerator,
+            perceptionLayer: perceptionLayer)
+        
+        let environment = EnvironmentDefault(
+            sight: sight,
+            context: environmentContext,
+            perceptionLayer: perceptionLayer)
 
         return environment
-    }()
-
-    private lazy var environmentContext: EnvironmentContext = {
-        return  EnvironmentContextDefault()
-    }()
-
-    // Maintenance
-    private lazy var brainMaintenance: BrainMaintenance = {
-        return  BrainMaintenanceDefault(brain: resolve())
-    }()
-
+    }
+    
+    static func buildMaintenance(with brain: Brain) -> BrainMaintenance {
+        return BrainMaintenanceDefault(brain: brain)
+    }
+    
 }
 // MARK: - DependencyFactory
 extension DependencyFactoryDefault: DependencyFactory {

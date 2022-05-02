@@ -12,5 +12,5 @@ extension HasDependencies {
 }
 // Statically store dependency factory in memory.
 fileprivate struct DependencyInjector {
-    static var dependencies: DependencyFactory = DependencyFactoryDefault()
+    static var dependencies: DependencyFactory = DependencyFactoryDefault.build()
 }
