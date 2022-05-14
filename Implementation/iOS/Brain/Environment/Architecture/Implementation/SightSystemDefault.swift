@@ -49,20 +49,20 @@ extension SightInputControllerDefault: SightInputController {
 
 // MARK: - SightViewController
 class SightViewController: BaseViewController {
-
+    var presenter: SightPresenter?
     
 }
 // MARK: - SightView
-/* Sight does not have output
+// only for show errors, because Sight System doesn´t show view info
 extension SightViewController: SightView {
 }
- */
+
 // MARK: - SightPresenter
 class SightPresenterDefault {
     var inputController: SightInputController
 
-// Sight does not have output
-//    weak var view: SightView?
+// Sight does not have view output, only for errors
+    weak var view: SightView?
     var interactor: SightInteractor?
     var router: SightRouter?
     
@@ -77,16 +77,30 @@ class SightPresenterDefault {
 
 // MARK: - SightPresenter
 extension SightPresenterDefault: SightPresenter {
+    
     func viewDidLoad() {
         
     }
     
-    func viewWillAppear() {
+    @objc func viewWillAppear() {
         
     }
     
     func viewDidAppear() {
         
+    }
+    
+    func execute(text: String) {
+        inputController.input(text: text)
+    }
+    
+    func execute(image: UIImage) {
+        guard let data = image.pngData() else {
+            view?.show(error: .sight)
+            return
+        }
+        
+        inputController.input(image: data)
     }
     
 }

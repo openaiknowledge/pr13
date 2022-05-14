@@ -6,6 +6,7 @@
 //  Base protocols to define Environment Architecture
 
 import Foundation  // Date
+import UIKit
 
 // MARK: Environment
 protocol Environment: AnyObject {
@@ -55,6 +56,11 @@ protocol SignalMapper {
     func map(signal: Signal) -> T
 }
 
+protocol SightInputController: SystemInputController {
+    func input(text: String)
+    func input(image: Data)
+}
+
 // MARK: - SightSystem
 protocol SightView: VIPERView {
 //   normally empty because out info will be in others Systems: ImageSystem, VoiceSystem,...
@@ -62,6 +68,8 @@ protocol SightView: VIPERView {
 
 protocol SightPresenter: Presenter {
     var inputController: SightInputController { get }
+    func execute(text: String)
+    func execute(image: UIImage)
 }
 
 protocol SightInteractorCallback: InteractorCallback {
@@ -76,7 +84,7 @@ protocol SightRouter: Router {
    
 }
 
-protocol SightInputController: SystemInputController {
-    func input(text: String)
-    func input(image: Data)
+// MARK: - Error
+enum EnvironmentError: Error {
+    case sight
 }
