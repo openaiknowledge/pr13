@@ -31,16 +31,17 @@ extension SightInputControllerDefault: SightInputController {
     }
     
     func input(text: String) {
-        guard let data = text.data(using: BrainDataDefault.Constant.dataTypeConversion) else { return }
+        let encoding = BrainDataDefault.Constant.txtEncodingDefault
+        guard let data = text.data(using: encoding) else { return }
         
-        let brainData = BrainDataDefault(type: .text, data: data)
+        let brainData = BrainDataDefault(type: .text, encoding: .txt(encoding), data: data)
         input(data: brainData)
         
     }
     
-    func input(image: Data) {
+    func input(image: Data, type: BrainDataDefault.ImageType) {
         
-        let brainData = BrainDataDefault(type: .image, data: image)
+        let brainData = BrainDataDefault(type: .image, encoding: .image(type), data: image)
         input(data: brainData)
 
     }
@@ -100,7 +101,7 @@ extension SightPresenterDefault: SightPresenter {
             return
         }
         
-        inputController.input(image: data)
+        inputController.input(image: data, type: .png)
     }
     
 }

@@ -23,7 +23,8 @@ class ReactiveLayerDefault {
 // MARK: - ReactiveLayer
 extension ReactiveLayerDefault: ReactiveLayer {
     func signal(_ signal: Signal) {
-//        TODO
+        print("ReactiveLayerDefault - signal: \(signal)")
+
     }
     
 }

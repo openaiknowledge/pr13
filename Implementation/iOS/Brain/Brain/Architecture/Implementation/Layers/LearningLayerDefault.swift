@@ -20,7 +20,8 @@ class LearningLayerDefault {
 // MARK: - LearningLayer
 extension LearningLayerDefault: LearningLayer {
     func signal(_ signal: Signal) {
-//        TODO
+        print("LearningLayerDefault - signal: \(signal)")
+
     }
     
 }

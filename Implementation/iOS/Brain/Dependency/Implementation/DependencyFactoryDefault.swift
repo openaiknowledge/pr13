@@ -61,6 +61,10 @@ private extension DependencyFactoryDefault {
         let knowledgeLayer = KnowledgeLayerDefault(
             context: brainContext)
         
+        let learningLayer = LearningLayerDefault(
+            context: brainContext,
+            knowledgeLayer: knowledgeLayer)
+
         let memoryLayer = MemoryLayerDefault(
             context: brainContext,
             knowledgeLayer: knowledgeLayer)
@@ -73,20 +77,13 @@ private extension DependencyFactoryDefault {
             memoryLayer: memoryLayer,
             actionLayer: actionLayer)
         
-        let perceptionLayer = PerceptionLayerDefault(
-            context: brainContext,
-            reactiveLayer: reactiveLayer,
-            memoryLayer: memoryLayer)
+        let perceptionLayer = PerceptionLayerDefault.build(with: brainContext, reactiveLayer: reactiveLayer, learningLayer: learningLayer)
         
         let proactiveLayer = ProactiveLayerDefault(
             context: brainContext,
             memoryLayer: memoryLayer,
             actionLayer: actionLayer)
-        
-        let learningLayer = LearningLayerDefault(
-            context: brainContext,
-            knowledgeLayer: knowledgeLayer)
-            
+                    
         // inject other layers in knowledgeLayer
         knowledgeLayer.reactiveLayer = reactiveLayer
         knowledgeLayer.proactiveLayer = proactiveLayer

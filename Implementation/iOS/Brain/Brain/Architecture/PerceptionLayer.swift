@@ -8,7 +8,7 @@
 protocol PerceptionLayer: Layer, AnyObject {
     // MARK: access to other Layers
     var reactiveLayer: ReactiveLayer { get }
-    var memoryLayer: MemoryLayer { get }
+    var learningLayer: LearningLayer { get }
     
     // functions
     func event(_ event: Event)

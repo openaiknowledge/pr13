@@ -58,7 +58,8 @@ protocol SignalMapper {
 
 protocol SightInputController: SystemInputController {
     func input(text: String)
-    func input(image: Data)
+    func input(image: Data, type: BrainDataDefault.ImageType)
+    
 }
 
 // MARK: - SightSystem

@@ -5,11 +5,11 @@
 //
 //  Default implementation of Perception process
 class PerceptionProcessDefault {
-        
     let model: ProcessModel
-    
     let activities: [Activity]
-
+    
+//   TODO: implement weak arrays
+    // weak array -> typealias WeakArray<T> = [() -> T?] https://frouo.com/posts/swift-how-to-declare-an-array-of-weak-references
     let nextLayers: [Layer]
     
     let status: ProcessStatus = ProcessStatusDefault.idle
@@ -25,50 +25,17 @@ class PerceptionProcessDefault {
 extension PerceptionProcessDefault: Process {
     
 }
+// MARK: - build
+extension PerceptionProcessDefault {
+    
+    static func build(with activities: [Activity], nextLayers: [Layer]) -> PerceptionProcessDefault {
+        let processModel = PerceptionProcessModelDefault()
+
+        return PerceptionProcessDefault(model: processModel, activities: activities, nextLayers: nextLayers)
+    }
+}
 
 // MARK: - needed implementations
 struct PerceptionProcessModelDefault: ProcessModel {
     
-}
-
-// TODO
-class MapperEventToSignalActivityDefault: MapperEventToSignalActivity {
-    var activityModels = [ActivityModel]()
-    
-    func exec(signal: Signal) -> Signal {
-        return SignalDefault(messages: [], processStatus: [])
-    }
-}
-// TODO
-class RepresentationOfSignalWithContextActivityDefault: RepresentationOfSignalWithContextActivity {
-    var activityModels = [ActivityModel]()
-    
-    func exec(signal: Signal) -> Signal {
-        return SignalDefault(messages: [], processStatus: [])
-    }
-}
-// TODO
-class FilterPerceptionActivityDefault: FilterPerceptionActivity {
-    var activityModels = [ActivityModel]()
-    
-    func exec(signal: Signal) -> Signal {
-        return SignalDefault(messages: [], processStatus: [])
-    }
-}
-
-
-// MARK: - build
-extension PerceptionProcessDefault {
-    // TODO
-    static func build(with layer: PerceptionLayer) -> PerceptionProcessDefault {
-        let processModel = PerceptionProcessModelDefault()
-        
-        let activities: [Activity] = [MapperEventToSignalActivityDefault(),
-                          MapperEventToSignalActivityDefault(),
-                          FilterPerceptionActivityDefault()]
-        
-        let layers = [layer.reactiveLayer, layer.memoryLayer]
-        
-        return PerceptionProcessDefault(model: processModel, activities: activities, nextLayers: layers)
-    }
 }

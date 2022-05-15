@@ -9,7 +9,8 @@ import Foundation
 struct BrainDataDefault: BrainData {
     
     enum Constant {
-        static var dataTypeConversion: String.Encoding = .utf32
+        static var txtEncodingDefault: String.Encoding = .utf8
+        static var imageEncodingDefault: ImageType = .png
     }
     
     enum ´Type´ {
@@ -17,6 +18,18 @@ struct BrainDataDefault: BrainData {
         case text
         case sound // voice?
     }
+
+    enum ImageType {
+        case png
+        case jpg
+    }
+
+    enum Encoding {
+        case image(ImageType)
+        case txt(String.Encoding)
+    }
+
     let type: ´Type´
+    let encoding: Encoding
     let data: Data
 }
