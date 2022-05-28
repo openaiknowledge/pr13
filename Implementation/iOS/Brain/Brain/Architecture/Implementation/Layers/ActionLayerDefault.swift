@@ -17,7 +17,7 @@ class ActionLayerDefault {
 }
 // MARK: - ActionLayer
 extension ActionLayerDefault: ActionLayer {
-    func signal(_ signal: Signal) {
+    func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process) {
 //        TODO
     }
     

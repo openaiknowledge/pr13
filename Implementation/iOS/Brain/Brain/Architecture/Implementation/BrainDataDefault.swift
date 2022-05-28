@@ -33,3 +33,14 @@ struct BrainDataDefault: BrainData {
     let encoding: Encoding
     let data: Data
 }
+// MARK: - generic builds
+extension BrainDataDefault {
+    static func build(with text: String) -> BrainDataDefault? {
+        let encoding = BrainDataDefault.Constant.txtEncodingDefault
+        if let data = text.data(using: encoding) {
+            return BrainDataDefault(type: .text, encoding: .txt(encoding), data: data)
+        } else {
+            return nil
+        }
+    }
+}

@@ -58,36 +58,29 @@ extension DependencyFactoryDefault {
 private extension DependencyFactoryDefault {
     static func buildBrain(brainContext: BrainContext) -> Brain {
         // layers
-        let knowledgeLayer = KnowledgeLayerDefault(
-            context: brainContext)
-        
+
         let learningLayer = LearningLayerDefault(
-            context: brainContext,
-            knowledgeLayer: knowledgeLayer)
+            context: brainContext)
 
         let memoryLayer = MemoryLayerDefault(
-            context: brainContext,
-            knowledgeLayer: knowledgeLayer)
+            context: brainContext)
+
+        let knowledgeLayer = KnowledgeLayerDefault(context: brainContext, learningLayer: learningLayer, memoryLayer: memoryLayer)
+        
         
         let actionLayer = ActionLayerDefault(
             context: brainContext)
         
-        let reactiveLayer = ReactiveLayerDefault(
-            context: brainContext,
-            memoryLayer: memoryLayer,
-            actionLayer: actionLayer)
+        let reactiveLayer = ReactiveLayerDefault.build(context: brainContext, memoryLayer: memoryLayer, actionLayer: actionLayer, knowledgeLayer: knowledgeLayer)
         
         let perceptionLayer = PerceptionLayerDefault.build(with: brainContext, reactiveLayer: reactiveLayer, learningLayer: learningLayer)
         
         let proactiveLayer = ProactiveLayerDefault(
             context: brainContext,
             memoryLayer: memoryLayer,
-            actionLayer: actionLayer)
-                    
-        // inject other layers in knowledgeLayer
-        knowledgeLayer.reactiveLayer = reactiveLayer
-        knowledgeLayer.proactiveLayer = proactiveLayer
-            
+            actionLayer: actionLayer,
+            knowledgeLayer: knowledgeLayer)
+                                
         return BrainDefault(perceptionLayer: perceptionLayer,
                                 actionLayer: actionLayer,
                                 reactiveLayer: reactiveLayer,

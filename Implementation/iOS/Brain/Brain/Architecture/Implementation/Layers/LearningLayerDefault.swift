@@ -8,18 +8,14 @@ class LearningLayerDefault {
     let context: BrainContext
     var processes = [Process]()
     var activities = [Activity]()
-
-    let knowledgeLayer: KnowledgeLayer
     
-    init(context: BrainContext,
-         knowledgeLayer: KnowledgeLayer) {
+    init(context: BrainContext) {
         self.context = context
-        self.knowledgeLayer = knowledgeLayer
     }
 }
 // MARK: - LearningLayer
 extension LearningLayerDefault: LearningLayer {
-    func signal(_ signal: Signal) {
+    func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process) {
         print("LearningLayerDefault - signal: \(signal)")
 
     }

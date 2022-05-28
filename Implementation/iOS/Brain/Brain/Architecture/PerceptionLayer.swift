@@ -1,4 +1,4 @@
-//  BrainArchitectureProtocols.swift
+//  PerceptionLayer.swift
 //  Brain
 //
 //  Created by Miguel Gutierrez on 10/01/2022
@@ -18,7 +18,7 @@ protocol PerceptionLayer: Layer, AnyObject {
 protocol MapperEventToSignalActivity: Activity {
     
 }
-protocol RepresentationOfSignalWithContextActivity: Activity {
+protocol RepresentationOfSignaltActivity: Activity {
     
 }
 protocol FilterPerceptionActivity: Activity {
@@ -30,7 +30,7 @@ protocol MapperEventToSignalModel: ActivityModel {
     
 }
 
-protocol RepresentationOfSignalWithContextModel: ActivityModel {
+protocol RepresentationOfSignaltModel: ActivityModel {
     
 }
 

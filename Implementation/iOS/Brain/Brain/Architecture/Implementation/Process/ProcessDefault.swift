@@ -3,29 +3,26 @@
 //
 //  Created by Miguel Gutierrez on 10/01/2022
 //
+import Foundation
 
 class ProcessDefault {
     
     var model: ProcessModel
     var status: ProcessStatus = ProcessStatusDefault.idle
-    var activities = [Activity]()
-    var nextLayers = [Layer]()
+    var activities = WeakArray<Activity>()
+    var nextLayers = WeakArray<Layer>()
     
-    init(model: ReactiveProcessModel, status: ProcessStatus = ProcessStatusDefault.idle) {
+    init(model: ProcessModel) {
         self.model = model
-        self.status = status
     }
 }
-extension ProcessDefault: Process {
-    func exec(signal: Signal) -> Signal {
-        return SignalDefault(messages: [], processStatus: [])
-    }
-}
+
 // MARK: - Signal
 struct SignalDefault: Signal {
     var messages: [BrainData]
     var processStatus: [ProcessStatus]
 
 }
-
-
+extension ProcessDefault: Process {
+   
+}

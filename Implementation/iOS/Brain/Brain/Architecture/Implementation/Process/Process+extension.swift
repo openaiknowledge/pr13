@@ -8,14 +8,20 @@ import Foundation
 
 // MARK: - exec
 extension Process {
-    func exec(signal: Signal) {
-        DispatchQueue(label: self.queueName).async {
+    //     execute activities in order - default exec
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process?) {
+        DispatchQueue(label: self.queueName).async { [weak self] in
+            guard let self = self else { return }
             var input = signal
-            activities.forEach {
-                input = $0.exec(signal: input)
+            self.activities.forEach {
+                if let activity = $0() {
+                    input = activity.exec(signal: input, fromLayer: fromLayer, fromProcess: self)
+                }
             }
-            nextLayers.forEach { layer in
-                layer.signal(input)
+            self.nextLayers.forEach {
+                if let layer = $0() {
+                    layer.signal(input, fromLayer: fromLayer, fromProcess: self)
+                }
             }
         }
     }

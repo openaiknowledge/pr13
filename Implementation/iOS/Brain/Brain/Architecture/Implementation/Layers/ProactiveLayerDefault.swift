@@ -11,18 +11,21 @@ class ProactiveLayerDefault {
 
     let memoryLayer: MemoryLayer
     let actionLayer: ActionLayer
+    let knowledgeLayer: KnowledgeLayer
     
     init(context: BrainContext,
          memoryLayer: MemoryLayer,
-         actionLayer: ActionLayer) {
+         actionLayer: ActionLayer,
+         knowledgeLayer: KnowledgeLayer) {
         self.context = context
         self.memoryLayer = memoryLayer
         self.actionLayer = actionLayer
+        self.knowledgeLayer = knowledgeLayer
     }
 }
 // MARK: - ProactiveLayer
 extension ProactiveLayerDefault: ProactiveLayer {
-    func signal(_ signal: Signal) {
+    func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process) {
 //        TODO
     }
     

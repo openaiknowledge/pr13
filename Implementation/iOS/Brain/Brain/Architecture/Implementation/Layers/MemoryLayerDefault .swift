@@ -8,18 +8,14 @@ class MemoryLayerDefault {
     let context: BrainContext
     var processes = [Process]()
     var activities = [Activity]()
-
-    let knowledgeLayer: KnowledgeLayer
     
-    init(context: BrainContext,
-         knowledgeLayer: KnowledgeLayer) {
+    init(context: BrainContext) {
         self.context = context
-        self.knowledgeLayer = knowledgeLayer
     }
 }
 // MARK: - MemoryLayer
 extension MemoryLayerDefault: MemoryLayer {
-    func signal(_ signal: Signal) {
+    func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process) {
 //        TODO
     }
     

@@ -19,56 +19,50 @@ protocol Brain {
 }
 
 // MARK: - activity
-protocol Activity {
+protocol Activity: AnyObject {
     var activityModels: [ActivityModel] { get }
 
     // exec input and returns output using activityModels
-    func exec(signal: Signal) -> Signal
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal
 }
 
 // MARK: - Layers
-protocol Layer {
+protocol Layer: AnyObject {
     var context: BrainContext { get }
     var processes: [Process] { get } // processes to execute in the layer. Normally will be one
     var activities: [Activity] { get }  // activities to implement in the layer
 
     // functions
-    func signal(_ signal: Signal)
+    func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process)
 }
 
 protocol ActionLayer: Layer {
     var environment: Environment? { get }
 }
 
-protocol ReactiveLayer: Layer {
-    // MARK: access to other Layers
-    var memoryLayer: MemoryLayer { get }
-    var actionLayer: ActionLayer { get }
-}
-
 protocol ProactiveLayer: Layer {
-    // access to other Layers
-    var memoryLayer: MemoryLayer { get }
+    // access to other Layers: output
     var actionLayer: ActionLayer { get }
+    // access to other Layers: output/input
+    var memoryLayer: MemoryLayer { get }
+    
+    // access to other Layers to input
+    var knowledgeLayer: KnowledgeLayer { get }
 }
 
 protocol LearningLayer: Layer {
-    // access to other Layers
-    var knowledgeLayer: KnowledgeLayer { get }
 
 }
 
 protocol MemoryLayer: Layer {
-    // access to other Layers
-    var knowledgeLayer: KnowledgeLayer { get }
+
 
 }
 
 protocol KnowledgeLayer: Layer {
-    // access to other Layers
-    var proactiveLayer: ProactiveLayer! { get }
-    var reactiveLayer: ReactiveLayer! { get }
-
+    // access to other Layers to input
+    var learningLayer: LearningLayer { get }
+    var memoryLayer: MemoryLayer { get }
 }
 
 // MARK: - Context
@@ -102,24 +96,24 @@ protocol LogicModel: KModel {
 }
 
 // MARK: - Process
-protocol Process {
+// We need Process to be AnyObject to implement default exec using weak
+protocol Process: AnyObject {
     // where execute the process
     var queueName: String { get }
     
     // models used to model the process
     var model: ProcessModel { get } // model of the process
-    
-    // activities to exec (in order)
-    var activities: [Activity] { get }
-    
-    // send info to next layers
-    var nextLayers: [Layer] { get }
-    
+        
     // helpers
     var status: ProcessStatus { get }
 
-    // execute activities in order
-    func exec(signal: Signal)
+    
+    // activities to exec (in order)
+    var activities: WeakArray<Activity> { get }
+    // send info to next layers
+    var nextLayers: WeakArray<Layer> { get }
+    
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process?)
 }
 
 protocol ProcessStatus {
@@ -127,11 +121,17 @@ protocol ProcessStatus {
 }
 
 // MARK: - general
+// BrainData represents data used in Brain
 protocol BrainData {
     
 }
-
+// Signal represents signal passed between layers in brain
 protocol Signal {
     var messages: [BrainData] { get }  // some levels of info of the signal
     var processStatus: [ProcessStatus] { get } // status of process executing in layer
+}
+// Embedding represents relatively low-dimensional space into which you can translate high-dimensional vectors
+// TODO
+protocol Embedding {
+    
 }

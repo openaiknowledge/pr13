@@ -6,13 +6,12 @@
 // Default implementation of PerceptionLayer
 class PerceptionLayerDefault  {
     //
-    var processes: [Process]
-    var activities: [Activity]
+    let context: BrainContext
 
     //
-    let context: BrainContext
+    var processes: [Process]
+    var activities: [Activity]
     
-    // next layers
     let reactiveLayer: ReactiveLayer
     let learningLayer: LearningLayer
     
@@ -35,11 +34,11 @@ extension PerceptionLayerDefault {
                       reactiveLayer: ReactiveLayer,
                       learningLayer: LearningLayer) -> PerceptionLayerDefault {
         let mapperEventToSignalActivity = MapperEventToSignalActivityDefault.build()
-        let representationOfSignalWithContextActivity = RepresentationOfSignalWithContextActivityDefault.build()
+        let RepresentationOfSignaltActivity = RepresentationOfSignaltActivityDefault.build()
         let filterPerceptionActivity = FilterPerceptionActivityDefault.build()
 
         let activities: [Activity] = [mapperEventToSignalActivity,
-                                      representationOfSignalWithContextActivity,
+                                      RepresentationOfSignaltActivity,
                                       filterPerceptionActivity]
         
         let nextLayers = [reactiveLayer, learningLayer]
@@ -50,15 +49,16 @@ extension PerceptionLayerDefault {
 
 // MARK: - PerceptionLayer
 extension PerceptionLayerDefault: PerceptionLayer {
+
     // functions
-    func signal(_ signal: Signal) {
+    func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process) {
         // this layer will not receive signals, only events
     }
     
     func event(_ event: Event) {
         print("PerceptionLayerDefault - event: \(event)")
         processes.forEach { process in
-            process.exec(signal: event.signal)
+            process.exec(signal: event.signal, fromLayer: self, fromProcess: nil)
         }
     }
 }
@@ -75,7 +75,7 @@ class MapperEventToSignalActivityDefault {
 // MARK: - MapperEventToSignalActivity
 extension MapperEventToSignalActivityDefault: MapperEventToSignalActivity {
     
-    func exec(signal: Signal) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
 //        TODO
         var messages = signal.messages
         let encoding = BrainDataDefault.Constant.txtEncodingDefault
@@ -97,8 +97,8 @@ extension MapperEventToSignalActivityDefault {
     }
 }
             
-// MARK: - RepresentationOfSignalWithContextActivityDefault
-class RepresentationOfSignalWithContextActivityDefault {
+// MARK: - RepresentationOfSignaltActivityDefault
+class RepresentationOfSignaltActivityDefault {
     var activityModels: [ActivityModel]
     
     init(activityModels: [ActivityModel]) {
@@ -106,14 +106,14 @@ class RepresentationOfSignalWithContextActivityDefault {
     }
     
 }
-// MARK: - RepresentationOfSignalWithContextActivity
-extension RepresentationOfSignalWithContextActivityDefault: RepresentationOfSignalWithContextActivity {
+// MARK: - RepresentationOfSignaltActivity
+extension RepresentationOfSignaltActivityDefault: RepresentationOfSignaltActivity {
     
-    func exec(signal: Signal) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
 //        TODO
         var messages = signal.messages
         let encoding = BrainDataDefault.Constant.txtEncodingDefault
-        guard let data = "RepresentationOfSignalWithContextActivityDefault".data(using: encoding) else {
+        guard let data = "RepresentationOfSignaltActivityDefault".data(using: encoding) else {
             return signal
         }
         let brainData = BrainDataDefault(type: .text, encoding: .txt(encoding), data:  data)
@@ -124,10 +124,10 @@ extension RepresentationOfSignalWithContextActivityDefault: RepresentationOfSign
     }
 }
 // MARK: - build
-extension RepresentationOfSignalWithContextActivityDefault {
-    static func build() -> RepresentationOfSignalWithContextActivityDefault {
-        let model = RepresentationOfSignalWithContextModelDefault()
-        return RepresentationOfSignalWithContextActivityDefault(activityModels: [model])
+extension RepresentationOfSignaltActivityDefault {
+    static func build() -> RepresentationOfSignaltActivityDefault {
+        let model = RepresentationOfSignaltModelDefault()
+        return RepresentationOfSignaltActivityDefault(activityModels: [model])
     }
 }
 // MARK: - FilterPerceptionActivityDefault
@@ -142,7 +142,7 @@ class FilterPerceptionActivityDefault {
 // MARK: - FilterPerceptionActivity
 extension FilterPerceptionActivityDefault: FilterPerceptionActivity {
 
-    func exec(signal: Signal) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
 //        TODO
         var messages = signal.messages
         let encoding = BrainDataDefault.Constant.txtEncodingDefault
@@ -169,7 +169,7 @@ class MapperEventToSignalModelDefault: MapperEventToSignalModel {
     //    TODO
 }
 
-class RepresentationOfSignalWithContextModelDefault: RepresentationOfSignalWithContextModel {
+class RepresentationOfSignaltModelDefault: RepresentationOfSignaltModel {
     //    TODO
 }
 

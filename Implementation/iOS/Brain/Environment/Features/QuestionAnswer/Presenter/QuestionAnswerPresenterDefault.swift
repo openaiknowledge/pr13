@@ -7,7 +7,7 @@
 import UIKit
 // MARK: - SightPresenter
 class QuestionAnswerPresenterDefault: SightPresenterDefault {
-    struct Constants {
+    enum Constants {
         static let defaultQuestion = "Was Albert Einstein born in Switzerland?"
         static let defaultAnswer = ""
     }

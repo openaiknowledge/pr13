@@ -1,0 +1,62 @@
+{
+  "type" : "project",
+  "name" : "pr13",
+  "description" : "OAK Mobile",
+  "tags" : "AI, mobile, knowledge",
+  "metadata" : [
+    {
+      "name" : "data",
+      "type" : "data",
+      "description" : "Data repository",
+      "metadata" : [
+        {
+          "name" : "1",
+          "type" : "data",
+          "description" : "V 1",
+          "metadata" : [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "model",
+      "type" : "model",
+      "description" : "Model repository",
+      "metadata" : [
+        {
+          "name" : "1",
+          "type" : "model",
+          "description" : "V 1",
+          "metadata" : []
+        }
+      ]
+    },
+    {
+      "name" : "code",
+      "type" : "code",
+      "description" : "Code repository",
+      "metadata" : [
+        {
+          "name" : "todo",
+          "type" : "file",
+          "description" : "todo",
+          "metadata" : []
+        }
+      ]
+    },
+    {
+      "name" : "doc",
+      "type" : "doc",
+      "description" : "Documentation",
+      "metadata" : [
+        {
+          "name" : "PR13.docx",
+          "type" : "file",
+          "description" : "OAK Mobile",
+          "metadata" : []
+        }
+      ]
+    }
+  ]
+}

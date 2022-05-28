@@ -6,18 +6,16 @@
 //  Default implementation of Perception process
 class PerceptionProcessDefault {
     let model: ProcessModel
-    let activities: [Activity]
-    
-//   TODO: implement weak arrays
-    // weak array -> typealias WeakArray<T> = [() -> T?] https://frouo.com/posts/swift-how-to-declare-an-array-of-weak-references
-    let nextLayers: [Layer]
-    
     let status: ProcessStatus = ProcessStatusDefault.idle
         
+    let activities: WeakArray<Activity>
+    let nextLayers: WeakArray<Layer>
+    
     init(model: ProcessModel, activities: [Activity], nextLayers: [Layer]) {
         self.model = model
-        self.activities = activities
-        self.nextLayers = nextLayers
+
+        self.activities = activities.weak()
+        self.nextLayers = nextLayers.weak()
     }
     
 }
@@ -25,6 +23,7 @@ class PerceptionProcessDefault {
 extension PerceptionProcessDefault: Process {
     
 }
+
 // MARK: - build
 extension PerceptionProcessDefault {
     

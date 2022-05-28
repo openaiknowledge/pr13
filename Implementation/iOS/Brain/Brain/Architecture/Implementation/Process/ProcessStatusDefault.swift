@@ -5,5 +5,5 @@
 //
 
 enum ProcessStatusDefault: ProcessStatus {
-    case idle, running
+    case idle, running, ended
 }
