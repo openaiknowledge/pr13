@@ -5,7 +5,7 @@
 //
 import UIKit
 
-class QuestionAnswerViewController: SightViewController {
+class QuestionAnswerViewController: EnvironmentViewController {
     // MARK: - Properties
     
     // MARK: - IBOutlets

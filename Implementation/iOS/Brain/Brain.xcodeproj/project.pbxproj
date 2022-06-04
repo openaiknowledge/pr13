@@ -71,6 +71,11 @@
 		BDAE82C428326D6500086520 /* ProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82C328326D6500086520 /* ProcessDefault.swift */; };
 		BDB0DF47281FDB6D001BFE5B /* DependencyFactoryDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */; };
 		BDB0DF4B281FEE89001BFE5B /* Process+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */; };
+		BDB50BE8284538EA001DBD9C /* ActionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BE7284538EA001DBD9C /* ActionLayer.swift */; };
+		BDB50BEA28453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BE928453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift */; };
+		BDB50BEC28453BAE001DBD9C /* FilterActionActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BEB28453BAE001DBD9C /* FilterActionActivityDefault.swift */; };
+		BDB50BEE28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BED28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift */; };
+		BDB50BF02845407E001DBD9C /* ActionProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BEF2845407E001DBD9C /* ActionProcessDefault.swift */; };
 		BDC511CA2842384D00B96814 /* LearningReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C52842384C00B96814 /* LearningReactiveProcessDefault.swift */; };
 		BDC511CB2842384D00B96814 /* RepresentationReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C62842384C00B96814 /* RepresentationReactiveProcessDefault.swift */; };
 		BDC511CC2842384D00B96814 /* CausalProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C72842384D00B96814 /* CausalProcessDefault.swift */; };
@@ -84,6 +89,9 @@
 		BDC511DE28423D6B00B96814 /* DecisionReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D728423D6B00B96814 /* DecisionReactiveActivityDefault.swift */; };
 		BDC511DF28423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D828423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift */; };
 		BDC511E128423EFD00B96814 /* RepresentationOfPerceptionSignalActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E028423EFD00B96814 /* RepresentationOfPerceptionSignalActivityDefault.swift */; };
+		BDC511E328438E9500B96814 /* EnvironmenVIPERDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E228438E9500B96814 /* EnvironmenVIPERDefault.swift */; };
+		BDC511E52843902000B96814 /* EnvironmentVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E42843902000B96814 /* EnvironmentVIPER.swift */; };
+		BDC511E72843937D00B96814 /* ImageSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E62843937D00B96814 /* ImageSystemDefault.swift */; };
 		BDD5EF0A2839084100BC97AF /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5EF092839084100BC97AF /* WeakArray.swift */; };
 		BDE64227281D59290037744C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE64226281D59290037744C /* BaseViewController.swift */; };
 		BDE6422B281D62070037744C /* SightSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422A281D62070037744C /* SightSystemDefault.swift */; };
@@ -178,6 +186,11 @@
 		BDAE82C328326D6500086520 /* ProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessDefault.swift; sourceTree = "<group>"; };
 		BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyFactoryDefault.swift; sourceTree = "<group>"; };
 		BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Process+extension.swift"; sourceTree = "<group>"; };
+		BDB50BE7284538EA001DBD9C /* ActionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionLayer.swift; sourceTree = "<group>"; };
+		BDB50BE928453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentationOfEventActivityDefault.swift; sourceTree = "<group>"; };
+		BDB50BEB28453BAE001DBD9C /* FilterActionActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterActionActivityDefault.swift; sourceTree = "<group>"; };
+		BDB50BED28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperSignalToEventActivityDefault.swift; sourceTree = "<group>"; };
+		BDB50BEF2845407E001DBD9C /* ActionProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionProcessDefault.swift; sourceTree = "<group>"; };
 		BDC511C52842384C00B96814 /* LearningReactiveProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningReactiveProcessDefault.swift; sourceTree = "<group>"; };
 		BDC511C62842384C00B96814 /* RepresentationReactiveProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentationReactiveProcessDefault.swift; sourceTree = "<group>"; };
 		BDC511C72842384D00B96814 /* CausalProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CausalProcessDefault.swift; sourceTree = "<group>"; };
@@ -191,6 +204,9 @@
 		BDC511D728423D6B00B96814 /* DecisionReactiveActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionReactiveActivityDefault.swift; sourceTree = "<group>"; };
 		BDC511D828423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CausalReasoningReactiveActivityDefault.swift; sourceTree = "<group>"; };
 		BDC511E028423EFD00B96814 /* RepresentationOfPerceptionSignalActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentationOfPerceptionSignalActivityDefault.swift; sourceTree = "<group>"; };
+		BDC511E228438E9500B96814 /* EnvironmenVIPERDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmenVIPERDefault.swift; sourceTree = "<group>"; };
+		BDC511E42843902000B96814 /* EnvironmentVIPER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentVIPER.swift; sourceTree = "<group>"; };
+		BDC511E62843937D00B96814 /* ImageSystemDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSystemDefault.swift; sourceTree = "<group>"; };
 		BDD5EF092839084100BC97AF /* WeakArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		BDE64226281D59290037744C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDE6422A281D62070037744C /* SightSystemDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SightSystemDefault.swift; sourceTree = "<group>"; };
@@ -436,6 +452,7 @@
 				BD43A9D4279D8291009B21BB /* Implementation */,
 				87595C122794253800BFE09C /* ProcessKModel.swift */,
 				87595C10279421F900BFE09C /* BrainArchitecture.swift */,
+				BDB50BE7284538EA001DBD9C /* ActionLayer.swift */,
 				BD700C8F280D772200504EC9 /* PerceptionLayer.swift */,
 				BDAE82BD283259C200086520 /* ReactiveLayer.swift */,
 			);
@@ -474,6 +491,7 @@
 			children = (
 				BD43A9DB279D8AAD009B21BB /* Implementation */,
 				BD43A99C279D6D4F009B21BB /* EnvironmentArchitecture.swift */,
+				BDC511E42843902000B96814 /* EnvironmentVIPER.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -583,7 +601,9 @@
 		BD43A9DB279D8AAD009B21BB /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
+				BDC511E228438E9500B96814 /* EnvironmenVIPERDefault.swift */,
 				BDE6422A281D62070037744C /* SightSystemDefault.swift */,
+				BDC511E62843937D00B96814 /* ImageSystemDefault.swift */,
 				BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */,
 			);
 			path = Implementation;
@@ -655,6 +675,7 @@
 		BD9E1F7B27A8742F009CB532 /* Process */ = {
 			isa = PBXGroup;
 			children = (
+				BDB50BEF2845407E001DBD9C /* ActionProcessDefault.swift */,
 				BDC511C22842374000B96814 /* ReactiveProcesses */,
 				BDAE82C328326D6500086520 /* ProcessDefault.swift */,
 				BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */,
@@ -719,6 +740,9 @@
 		BDC511CF28423C7E00B96814 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				BDB50BEB28453BAE001DBD9C /* FilterActionActivityDefault.swift */,
+				BDB50BED28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift */,
+				BDB50BE928453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift */,
 				BDC511D828423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift */,
 				BDC511D728423D6B00B96814 /* DecisionReactiveActivityDefault.swift */,
 				BDC511D328423D6B00B96814 /* DeductiveReasoningReactiveActivityDefault.swift */,
@@ -893,7 +917,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB50BEC28453BAE001DBD9C /* FilterActionActivityDefault.swift in Sources */,
 				BD43A9D6279D8291009B21BB /* BrainContextDefault.swift in Sources */,
+				BDB50BEA28453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift in Sources */,
 				BD43A9C6279D773A009B21BB /* APIRouter.swift in Sources */,
 				BDA77D3A282FD93600ABA8D9 /* QuestionAnswerPresenterDefault.swift in Sources */,
 				BDAE82C02832612F00086520 /* ProcessStatusDefault.swift in Sources */,
@@ -901,6 +927,7 @@
 				BD43A99E279D6D4F009B21BB /* EnvironmentArchitecture.swift in Sources */,
 				BD9E1F7727A873C8009CB532 /* PerceptionLayerDefault.swift in Sources */,
 				BD43A9DF279D8AAD009B21BB /* EnvironmentDefault.swift in Sources */,
+				BDB50BE8284538EA001DBD9C /* ActionLayer.swift in Sources */,
 				87595C11279421F900BFE09C /* BrainArchitecture.swift in Sources */,
 				87595BF42792F48A00BFE09C /* QuestionAnswerConfigurator.swift in Sources */,
 				BD43A9CC279D798B009B21BB /* ConstantsStoreDefault.swift in Sources */,
@@ -908,8 +935,10 @@
 				BDC511CE2842384D00B96814 /* DecisionReactiveProcessDefault.swift in Sources */,
 				BDE6422D281E6F620037744C /* BrainDataDefault.swift in Sources */,
 				BD9E1F7827A873C8009CB532 /* ProactiveLayerDefault.swift in Sources */,
+				BDC511E328438E9500B96814 /* EnvironmenVIPERDefault.swift in Sources */,
 				87595C052792F78700BFE09C /* MainRouter.swift in Sources */,
 				BD43A9AF279D772D009B21BB /* GenericError.swift in Sources */,
+				BDC511E52843902000B96814 /* EnvironmentVIPER.swift in Sources */,
 				BDC511DA28423D6B00B96814 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BDC511DC28423D6B00B96814 /* LearningReactiveActivityDefault.swift in Sources */,
 				BDC511DD28423D6B00B96814 /* ProblemSolvingReasoningReactiveActivityDefault.swift in Sources */,
@@ -923,6 +952,7 @@
 				BDC511DF28423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift in Sources */,
 				BDC511E128423EFD00B96814 /* RepresentationOfPerceptionSignalActivityDefault.swift in Sources */,
 				87595BF22792F48A00BFE09C /* QuestionAnswerViewController.swift in Sources */,
+				BDC511E72843937D00B96814 /* ImageSystemDefault.swift in Sources */,
 				BD88448727AAF90000F2CBFA /* KModelProcessDefault.swift in Sources */,
 				BD43A9CF279D798B009B21BB /* ConstantsStore.swift in Sources */,
 				BDE6422B281D62070037744C /* SightSystemDefault.swift in Sources */,
@@ -933,6 +963,7 @@
 				BD43A9C4279D773A009B21BB /* APIClient.swift in Sources */,
 				BD9E1F7927A873C8009CB532 /* MemoryLayerDefault .swift in Sources */,
 				BDC511CC2842384D00B96814 /* CausalProcessDefault.swift in Sources */,
+				BDB50BF02845407E001DBD9C /* ActionProcessDefault.swift in Sources */,
 				BD43A9CE279D798B009B21BB /* UserDefaultsStorage.swift in Sources */,
 				BDC511CB2842384D00B96814 /* RepresentationReactiveProcessDefault.swift in Sources */,
 				BD43A9E6279D8C6A009B21BB /* KnowledgeLayerDefault.swift in Sources */,
@@ -952,6 +983,7 @@
 				BDD5EF0A2839084100BC97AF /* WeakArray.swift in Sources */,
 				87595C132794253800BFE09C /* ProcessKModel.swift in Sources */,
 				BDB0DF4B281FEE89001BFE5B /* Process+extension.swift in Sources */,
+				BDB50BEE28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift in Sources */,
 				BD43A9DA279D879B009B21BB /* BrainDefault.swift in Sources */,
 				BD43A9A8279D72A0009B21BB /* HasDependencies.swift in Sources */,
 			);

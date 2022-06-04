@@ -75,7 +75,7 @@ class MapperEventToSignalActivityDefault {
 // MARK: - MapperEventToSignalActivity
 extension MapperEventToSignalActivityDefault: MapperEventToSignalActivity {
     
-    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
         var messages = signal.messages
         let encoding = BrainDataDefault.Constant.txtEncodingDefault
@@ -109,7 +109,7 @@ class RepresentationOfSignaltActivityDefault {
 // MARK: - RepresentationOfSignaltActivity
 extension RepresentationOfSignaltActivityDefault: RepresentationOfSignaltActivity {
     
-    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
         var messages = signal.messages
         let encoding = BrainDataDefault.Constant.txtEncodingDefault
@@ -142,7 +142,7 @@ class FilterPerceptionActivityDefault {
 // MARK: - FilterPerceptionActivity
 extension FilterPerceptionActivityDefault: FilterPerceptionActivity {
 
-    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
         var messages = signal.messages
         let encoding = BrainDataDefault.Constant.txtEncodingDefault

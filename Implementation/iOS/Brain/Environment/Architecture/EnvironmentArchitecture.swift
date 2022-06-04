@@ -11,9 +11,11 @@ import UIKit
 // MARK: Environment
 protocol Environment: AnyObject {
     var context: EnvironmentContext { get }
+    var eventsDispatcher: EventsDispatcher { get }
 
     // Systems
-    var sight: SightInputController { get }
+    var sightInputController: SightInputController { get }
+    var imageOutputController: ImageOutputController { get }
 
     // access to layer
     var perceptionLayer: PerceptionLayer { get }
@@ -30,15 +32,14 @@ protocol SystemInputController {
     // Data
     var context: EnvironmentContext { get }
     var eventGenerator: EventGenerator  { get }
-    var perceptionLayer: PerceptionLayer  { get }
+    var perceptionLayer: PerceptionLayer  { get set}
 
     // functions
     func input(data: BrainData)
     
 }
-protocol SystemOutputController {
+protocol SystemOutputController: AnyObject {
     var context: EnvironmentContext { get }
-    var signalMapper: Signal { get }
 }
 
 // MARK: - Event
@@ -50,42 +51,20 @@ protocol Event {
 protocol EventGenerator {
     func generate(data: BrainData) -> Event
 }
-
-protocol SignalMapper {
-    associatedtype T
-    func map(signal: Signal) -> T
+// it dispatches each event in his correspondent system
+protocol EventsDispatcher: AnyObject {
+    var systems: WeakArray<SystemOutputController> { get }
+    func dispatch(events: [Event])
 }
-
+// MARK: - Systems controller
 protocol SightInputController: SystemInputController {
     func input(text: String)
     func input(image: Data, type: BrainDataDefault.ImageType)
     
 }
 
-// MARK: - SightSystem
-protocol SightView: VIPERView {
-//   normally empty because out info will be in others Systems: ImageSystem, VoiceSystem,...
-}
-
-protocol SightPresenter: Presenter {
-    var inputController: SightInputController { get }
-    func execute(text: String)
-    func execute(image: UIImage)
-}
-
-protocol SightInteractorCallback: InteractorCallback {
-   
-}
-
-protocol SightInteractor: Interactor {
-   
-}
-
-protocol SightRouter: Router {
-   
-}
-
-// MARK: - Error
-enum EnvironmentError: Error {
-    case sight
+protocol ImageOutputController: SystemOutputController {
+    func show(text: String)
+    func show(image: Data, type: BrainDataDefault.ImageType)
+    
 }

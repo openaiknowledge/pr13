@@ -48,7 +48,9 @@ extension CausalProcessDefault: CausalProcess {
             var input = signal
             self.activities.forEach {
                 if let activity = $0() {
-                    input = activity.exec(signal: input, fromLayer: fromLayer, fromProcess: self)
+                    if let inputResult = activity.exec(signal: input, fromLayer: fromLayer, fromProcess: self) {
+                        input = inputResult
+                    }
                 }
             }
             self.nextProcess.forEach {

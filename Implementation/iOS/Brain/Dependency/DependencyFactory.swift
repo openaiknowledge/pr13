@@ -12,10 +12,10 @@ protocol DependencyFactory {
     func resolve() -> BrainContext
     func resolve() -> BrainMaintenance
 
-    // MARK: Environment
+    // MARK: systems
     func resolve() -> SightInputController
-    func resolve() -> EventGenerator
-
+    func resolve() -> ImageOutputController
+    
     // MARK: others
     func resolve() -> ConstantsStore
     func resolve() -> APIClient

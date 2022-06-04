@@ -14,9 +14,9 @@ class InductiveReasoningReactiveActivityDefault {
     }
 }
 extension InductiveReasoningReactiveActivityDefault: InductiveReasoningReactiveActivity {
-    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
-        return SignalDefault(messages: [], processStatus: [])
+        return nil
     }
 }
 // MARK: - build

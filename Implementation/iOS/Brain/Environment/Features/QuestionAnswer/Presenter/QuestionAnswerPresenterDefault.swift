@@ -5,8 +5,8 @@
 //
 
 import UIKit
-// MARK: - SightPresenter
-class QuestionAnswerPresenterDefault: SightPresenterDefault {
+// MARK: - EnvironmentPresenter
+class QuestionAnswerPresenterDefault: EnvironmentPresenterDefault {
     enum Constants {
         static let defaultQuestion = "Was Albert Einstein born in Switzerland?"
         static let defaultAnswer = ""

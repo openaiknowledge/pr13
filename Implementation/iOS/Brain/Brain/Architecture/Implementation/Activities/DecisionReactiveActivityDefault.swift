@@ -20,7 +20,7 @@ class DecisionReactiveActivityDefault {
 }
 extension DecisionReactiveActivityDefault: DecisionReactiveActivity {
 
-    func exec(signals: [Signal], fromLayer: Layer, fromProcess: Process, millisecondsSinceStartedProcess: Double) -> Signal {
+    func exec(signals: [Signal], fromLayer: Layer, fromProcess: Process, millisecondsSinceStartedProcess: Double) -> Signal? {
 
         //  TODO: implement ReactiveModel
         
@@ -36,7 +36,7 @@ extension DecisionReactiveActivityDefault: DecisionReactiveActivity {
 
     }
     
-    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal {
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
         return exec(signals: [signal], fromLayer: fromLayer, fromProcess: fromProcess, millisecondsSinceStartedProcess: 0)
     }
     

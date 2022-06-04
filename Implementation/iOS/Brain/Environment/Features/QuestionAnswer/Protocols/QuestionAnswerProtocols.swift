@@ -7,22 +7,22 @@
 import UIKit
 
 // MARK: - QuestionAnswer
-protocol QuestionAnswerView: SightView {
+protocol QuestionAnswerView: EnvironmentView {
     func show(question: String)
     func show(answer: String)
 }
 
-protocol QuestionAnswerPresenter: SightPresenter {
+protocol QuestionAnswerPresenter: EnvironmentPresenter {
 }
 
-protocol QuestionAnswerInteractorCallback: SightInteractorCallback {
+protocol QuestionAnswerInteractorCallback: EnvironmentInteractorCallback {
    
 }
 
-protocol QuestionAnswerInteractor: SightInteractor {
+protocol QuestionAnswerInteractor: EnvironmentInteractor {
    
 }
 
-protocol QuestionAnswerRouter: SightRouter {
+protocol QuestionAnswerRouter: EnvironmentRouter {
    
 }

@@ -8,21 +8,32 @@
 import UIKit
 
 // MARK: - Environment
-class EnvironmentDefault: Environment {
-    var sight: SightInputController    
-
+class EnvironmentDefault {
     let context: EnvironmentContext
+    let eventsDispatcher: EventsDispatcher
+    
+    let sightInputController: SightInputController
+    let imageOutputController: ImageOutputController
+
     unowned var perceptionLayer: PerceptionLayer
 
-    init(sight: SightInputController,
-         context: EnvironmentContext,
+    init(context: EnvironmentContext,
+         eventsDispatcher: EventsDispatcher,
+         sightInputController: SightInputController,
+         imageOutputController: ImageOutputController,
          perceptionLayer: PerceptionLayer) {
-        self.sight = sight
+
         self.context = context
+        self.eventsDispatcher = eventsDispatcher
+        self.sightInputController = sightInputController
+        self.imageOutputController = imageOutputController
         self.perceptionLayer = perceptionLayer
     }
 }
-
+// MARK: - Environment
+extension EnvironmentDefault: Environment {
+    
+}
 // MARK: - EnvironmentContext
 struct EnvironmentContextDefault: EnvironmentContext {
 
@@ -44,5 +55,18 @@ class EventGeneratorDefault: EventGenerator {
 
     func generate(data: BrainData) -> Event {
         return EventDefault(data: data, date: Date())
+    }
+}
+
+// MARK: - EventGenerator
+class EventsDispatcherDefault: EventsDispatcher {
+    var systems: WeakArray<SystemOutputController>
+    
+    init(outputSystems: [SystemOutputController]) {
+        self.systems = outputSystems.weak()
+    }
+    
+    func dispatch(events: [Event]) {
+//        TODO
     }
 }

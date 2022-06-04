@@ -23,7 +23,7 @@ protocol Activity: AnyObject {
     var activityModels: [ActivityModel] { get }
 
     // exec input and returns output using activityModels
-    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal
+    func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal?
 }
 
 // MARK: - Layers
@@ -34,10 +34,6 @@ protocol Layer: AnyObject {
 
     // functions
     func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process)
-}
-
-protocol ActionLayer: Layer {
-    var environment: Environment? { get }
 }
 
 protocol ProactiveLayer: Layer {
@@ -94,6 +90,11 @@ protocol SymbolicModel: KModel {
 protocol LogicModel: KModel {
     
 }
+// Embedding represents relatively low-dimensional space into which you can translate high-dimensional vectors
+// TODO
+protocol EmbeddingModel: KModel {
+    
+}
 
 // MARK: - Process
 // We need Process to be AnyObject to implement default exec using weak
@@ -129,9 +130,4 @@ protocol BrainData {
 protocol Signal {
     var messages: [BrainData] { get }  // some levels of info of the signal
     var processStatus: [ProcessStatus] { get } // status of process executing in layer
-}
-// Embedding represents relatively low-dimensional space into which you can translate high-dimensional vectors
-// TODO
-protocol Embedding {
-    
 }

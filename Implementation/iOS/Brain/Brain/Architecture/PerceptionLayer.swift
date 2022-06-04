@@ -5,7 +5,7 @@
 //
 //  Base protocols for Perception layer
 
-protocol PerceptionLayer: Layer, AnyObject {
+protocol PerceptionLayer: Layer {
     // MARK: access to other Layers
     var reactiveLayer: ReactiveLayer { get }
     var learningLayer: LearningLayer { get }

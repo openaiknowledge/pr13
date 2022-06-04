@@ -48,6 +48,19 @@ extension Array where Element == Process {
         
     }
 }
+extension Array where Element == SystemOutputController {
+    func weak() -> WeakArray<Element> {
+        let arrayMapped: WeakArray<Element> = map { element in
+            let function: (() -> Element?) = { [weak element] in
+                element
+            }
+            
+            return function
+        }
+        return arrayMapped
+        
+    }
+}
 /*
 extension Array where Element: AnyObject {
     // it doesn´t work when We use in activities.weak() -> "Referencing instance method 'weak()' on 'Array' requires that 'Activity' be a class type"

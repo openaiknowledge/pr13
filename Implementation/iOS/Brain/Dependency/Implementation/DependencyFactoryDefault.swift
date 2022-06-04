@@ -8,7 +8,6 @@
 //  - Environment:
 //      + update brain data with environment
 //  - Maintenance
-// TODO: separate Brain/Environment/Maintenance?
 class DependencyFactoryDefault {
     
     // Brain
@@ -38,27 +37,36 @@ class DependencyFactoryDefault {
 extension DependencyFactoryDefault {
     static func build() -> DependencyFactoryDefault {
         let brainContext = BrainContextDefault()
+        
+        // BRAIN
         let brain = buildBrain(brainContext: brainContext)
         let environmentContext = EnvironmentContextDefault()
         
+        // ENVIRONMENT
         let environment = buildEnvironment(
             with: environmentContext,
             perceptionLayer: brain.perceptionLayer)
         
         if let actionLayer = brain.actionLayer as? ActionLayerDefault {
-            actionLayer.environment = environment
+            actionLayer.setup(with: environment.eventsDispatcher)
         }
-        
+        // MAINTENANCE
         let maintenance = buildMaintenance(with: brain)
         
-        return DependencyFactoryDefault(brainContext: brainContext, brain: brain, environmentContext: environmentContext, environment: environment, brainMaintenance: maintenance)
+        return DependencyFactoryDefault(
+            brainContext: brainContext,
+            brain: brain,
+            environmentContext: environmentContext,
+            environment: environment,
+            brainMaintenance: maintenance)
     }
 }
 // MARK: - private build helper functions
 private extension DependencyFactoryDefault {
-    static func buildBrain(brainContext: BrainContext) -> Brain {
+    static func buildBrain(
+        brainContext: BrainContext) -> Brain {
+        
         // layers
-
         let learningLayer = LearningLayerDefault(
             context: brainContext)
 
@@ -67,9 +75,7 @@ private extension DependencyFactoryDefault {
 
         let knowledgeLayer = KnowledgeLayerDefault(context: brainContext, learningLayer: learningLayer, memoryLayer: memoryLayer)
         
-        
-        let actionLayer = ActionLayerDefault(
-            context: brainContext)
+        let actionLayer = ActionLayerDefault.build(context: brainContext)
         
         let reactiveLayer = ReactiveLayerDefault.build(context: brainContext, memoryLayer: memoryLayer, actionLayer: actionLayer, knowledgeLayer: knowledgeLayer)
         
@@ -95,16 +101,24 @@ private extension DependencyFactoryDefault {
     static func buildEnvironment(with
                     environmentContext: EnvironmentContext,
                     perceptionLayer: PerceptionLayer) -> Environment {
+        
         let eventGenerator = EventGeneratorDefault()
         
-        let sight = SightInputControllerDefault(
+        let sightInputController = SightInputControllerDefault(
             context: environmentContext,
             eventGenerator: eventGenerator,
             perceptionLayer: perceptionLayer)
+
+        let imageOutputController = ImageOutputControllerDefault(context: environmentContext)
+        
+        let outputSystems = [imageOutputController]
+        let eventsDispatcher = EventsDispatcherDefault(outputSystems: outputSystems)
         
         let environment = EnvironmentDefault(
-            sight: sight,
             context: environmentContext,
+            eventsDispatcher: eventsDispatcher,
+            sightInputController: sightInputController,
+            imageOutputController: imageOutputController,
             perceptionLayer: perceptionLayer)
 
         return environment
@@ -137,18 +151,13 @@ extension DependencyFactoryDefault: DependencyFactory {
     func resolve() -> BrainMaintenance {
         return brainMaintenance
     }
-
-    // MARK: Environment - systems
-    func resolve() -> SightInputController {
-        let brain: Brain = resolve()
-        return SightInputControllerDefault(
-            context: resolve(),
-            eventGenerator: resolve(),
-            perceptionLayer: brain.perceptionLayer)
-    }
     
-    func resolve() -> EventGenerator {
-        return EventGeneratorDefault()
+    // MARK: systems
+    func resolve() -> SightInputController {
+        return environment.sightInputController
+    }
+    func resolve() -> ImageOutputController {
+        return environment.imageOutputController
     }
     
     // MARK: - Store

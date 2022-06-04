@@ -16,13 +16,15 @@ class QuestionAnswerConfigurator: HasDependencies {
 
     func createModule() -> UIViewController  {
 
-        let inputController: SightInputController = dependencies.resolve()
+        let sightController: SightInputController = dependencies.resolve()
+        let imageController: ImageOutputController = dependencies.resolve()
         let view = QuestionAnswerViewController()
-        let interactor: SightInteractorDefault = SightInteractorDefault()
-        let router: SightRouter = SightRouterDefault(mainRouter: MainRouterDefault(parentVC: view))
+        let interactor: EnvironmentInteractorDefault = EnvironmentInteractorDefault()
+        let router: EnvironmentRouter = EnvironmentRouterDefault(mainRouter: MainRouterDefault(parentVC: view))
         
         let presenter: QuestionAnswerPresenterDefault = QuestionAnswerPresenterDefault(
-            inputController: inputController,
+            sightController: sightController,
+            imageController: imageController,
             interactor: interactor,
             router: router)
         

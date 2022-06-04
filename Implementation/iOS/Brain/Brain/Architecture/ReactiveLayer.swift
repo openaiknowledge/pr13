@@ -60,7 +60,7 @@ protocol RepresentationOfPerceptionSignalActivity: Activity {
 
 protocol DecisionReactiveActivity: Activity {
     
-    func exec(signals: [Signal], fromLayer: Layer, fromProcess: Process, millisecondsSinceStartedProcess: Double) -> Signal
+    func exec(signals: [Signal], fromLayer: Layer, fromProcess: Process, millisecondsSinceStartedProcess: Double) -> Signal?
 
 }
 
