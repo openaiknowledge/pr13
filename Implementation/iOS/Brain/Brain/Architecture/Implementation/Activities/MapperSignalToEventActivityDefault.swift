@@ -4,6 +4,7 @@
 //  Created by Miguel Gutierrez on 10/01/2022
 //
 // Default implementation of MapperSignalToEventActivity
+import Foundation
 
 // MARK: - MapperSignalToEventActivityDefault
 class MapperSignalToEventActivityDefault {
@@ -15,8 +16,13 @@ class MapperSignalToEventActivityDefault {
 }
 extension MapperSignalToEventActivityDefault: MapperSignalToEventActivity {
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Event? {
-//        TODO
-        return nil
+
+        //        TODO
+        if let brainData = BrainDataDefault.build(with: "FilterActionActivityDefault - testing") {
+            return EventDefault(data: brainData, date: Date())
+        } else {
+            return nil
+        }
     }
 }
 // MARK: - build

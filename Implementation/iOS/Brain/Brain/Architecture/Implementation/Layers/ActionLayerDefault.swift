@@ -35,13 +35,23 @@ extension ActionLayerDefault: ActionLayer {
 // MARK: - build
 extension ActionLayerDefault {
     static func build(context: BrainContext) -> ActionLayerDefault {
+
+        let mapperSignalToEventActivity = MapperSignalToEventActivityDefault.build()
+        let representationOfEventActivity = RepresentationOfEventActivityDefault.build()
+        let filterActionActivity = FilterActionActivityDefault.build()
+        
+        // It´s important the order
+        let activities: [Activity] =
+            [mapperSignalToEventActivity,
+             representationOfEventActivity,
+             filterActionActivity]
         
         return ActionLayerDefault(context: context,
-                                   processes: [], activities: [])
+                                   processes: [], activities: activities)
     }
     func setup(with eventsDispatcher: EventsDispatcher) {
         self.eventsDispatcher = eventsDispatcher
-        
+            
         let actionProcess = ActionProcessDefault.build(with: activities, eventsDispatcher: eventsDispatcher)
         
         processes.append(actionProcess)

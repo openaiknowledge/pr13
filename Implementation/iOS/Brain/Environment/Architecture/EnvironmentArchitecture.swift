@@ -40,6 +40,9 @@ protocol SystemInputController {
 }
 protocol SystemOutputController: AnyObject {
     var context: EnvironmentContext { get }
+    
+    // functions
+    func output(data: BrainData)
 }
 
 // MARK: - Event

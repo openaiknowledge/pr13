@@ -4,7 +4,7 @@
 //  Created by Miguel Gutierrez on 10/01/2022
 //
 // Default implementation of RepresentationOfEventActivity
-
+import Foundation
 // MARK: - RepresentationOfEventActivityDefault
 class RepresentationOfEventActivityDefault {
     var activityModels: [ActivityModel]
@@ -15,8 +15,13 @@ class RepresentationOfEventActivityDefault {
 }
 extension RepresentationOfEventActivityDefault: RepresentationOfEventActivity {
     func exec(event: Event, fromLayer: Layer, fromProcess: Process) -> Event? {
-//        TODO
-        return nil
+        //        TODO
+        if let brainData = BrainDataDefault.build(with: "FilterActionActivityDefault - testing") {
+            return EventDefault(data: brainData, date: Date())
+        } else {
+            return nil
+        }
+
     }
 }
 // MARK: - build

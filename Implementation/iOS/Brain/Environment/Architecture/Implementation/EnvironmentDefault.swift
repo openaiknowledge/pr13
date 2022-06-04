@@ -67,6 +67,15 @@ class EventsDispatcherDefault: EventsDispatcher {
     }
     
     func dispatch(events: [Event]) {
-//        TODO
+        // TODO
+        events.forEach { event in
+            systems.forEach {
+                if let system = $0() {
+                    if let data = event.signal.messages.first {
+                        system.output(data: data)
+                    }
+                }
+            }
+        }
     }
 }

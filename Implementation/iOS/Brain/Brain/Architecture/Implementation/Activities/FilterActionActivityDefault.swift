@@ -4,6 +4,7 @@
 //  Created by Miguel Gutierrez on 10/01/2022
 //
 // Default implementation of FilterActionActivity
+import Foundation
 
 // MARK: - FilterActionActivityDefault
 class FilterActionActivityDefault {
@@ -16,7 +17,11 @@ class FilterActionActivityDefault {
 extension FilterActionActivityDefault: FilterActionActivity {
     func exec(event: Event, fromLayer: Layer, fromProcess: Process) -> Event? {
 //        TODO
-        return nil
+        if let brainData = BrainDataDefault.build(with: "FilterActionActivityDefault - testing") {
+            return EventDefault(data: brainData, date: Date())
+        } else {
+            return nil
+        }
     }
 
 }

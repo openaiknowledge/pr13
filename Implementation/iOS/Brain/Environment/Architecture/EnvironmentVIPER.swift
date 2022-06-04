@@ -15,10 +15,12 @@ protocol EnvironmentView: VIPERView {
 
 protocol EnvironmentPresenter: Presenter {
     var sightController: SightInputController { get }
-    var imageController: ImageOutputController { get }
     
     func execute(text: String)
     func execute(image: UIImage)
+    
+    func show(text: String)
+    func show(image: Data, type: BrainDataDefault.ImageType)
 }
 
 protocol EnvironmentInteractorCallback: InteractorCallback {

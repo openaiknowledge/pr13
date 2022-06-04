@@ -28,6 +28,9 @@ class QuestionAnswerConfigurator: HasDependencies {
             interactor: interactor,
             router: router)
         
+        if let imageController = imageController as? ImageOutputControllerDefault {
+            imageController.presenter = presenter
+        }
         view.presenter = presenter
         
         presenter.view = view

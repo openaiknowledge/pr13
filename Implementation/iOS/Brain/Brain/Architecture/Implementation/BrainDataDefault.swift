@@ -9,7 +9,7 @@ import Foundation
 struct BrainDataDefault: BrainData {
     
     enum Constant {
-        static var txtEncodingDefault: String.Encoding = .utf8
+        static var txtEncodingDefault: String.Encoding = .unicode
         static var imageEncodingDefault: ImageType = .png
     }
     

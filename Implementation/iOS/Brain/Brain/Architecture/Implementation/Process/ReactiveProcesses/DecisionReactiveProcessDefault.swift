@@ -38,12 +38,12 @@ class DecisionReactiveProcessDefault {
     // weak injections
     var activities: WeakArray<Activity> // activities to decide
     var nextLayers: WeakArray<Layer>
-    var processToControl: WeakArray<Process>
+    var processToControl: [Process]
 
     init(model: ProcessModel, activities: [Activity], processToControl: [Process], nextLayers: [Layer]) {
         self.model = model
         self.activities = activities.weak()
-        self.processToControl = processToControl.weak()
+        self.processToControl = processToControl
         self.nextLayers = nextLayers.weak()
     }
 }
@@ -89,7 +89,7 @@ extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process?) {
         self.fromLayer = fromLayer
         startTimeOfProcess = Date()
-        
+        /* todo testing
         DispatchQueue(label: self.queueName).async { [weak self] in
             guard let self = self else { return }
             switch fromProcess {
@@ -105,18 +105,21 @@ extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
             default: break
             }
         }
+         */
         /*
             infinite until DecisionActivity return a signal (it controls limit time)
             use Timer to execute each time incrementally
          */
         fireDecision()
+        
+                
     }
 }
 // MARK: timer and execDecisionActivity
 private extension DecisionReactiveProcessDefault {
     @objc func fireDecision() {
-        timer?.invalidate()
-
+        invalidateTimer()
+        
         guard let fromLayer = fromLayer else { return }
         
         // check best decision
@@ -130,16 +133,31 @@ private extension DecisionReactiveProcessDefault {
             return
         }
         
-        timer = Timer.scheduledTimer(timeInterval: Constants.timeToTakeDecision, target: self, selector: #selector(fireDecision), userInfo: nil, repeats: false)
+        initTimer()
     }
+
+    func initTimer() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.timer?.invalidate()
+            self.timer = Timer.scheduledTimer(timeInterval: Constants.timeToTakeDecision, target: self, selector: #selector(self.fireDecision), userInfo: nil, repeats: false)
+        }
+    }
+    
+    private func invalidateTimer() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.timer?.invalidate()
+            self.timer = nil
+        }
+    }
+    
 }
 private extension DecisionReactiveProcessDefault {
     func mainExec(signal: Signal, fromLayer: Layer) {
         
         self.processToControl.forEach {
-            if let process = $0() {
-                process.exec(signal: signal, fromLayer: fromLayer, fromProcess: self)
-            }
+            $0.exec(signal: signal, fromLayer: fromLayer, fromProcess: self)
         }
 
     }
@@ -158,7 +176,7 @@ private extension DecisionReactiveProcessDefault {
     func execDecisionActivity() -> Signal? {
         guard let decisionActivity = activities.first?() as? DecisionReactiveActivity else { return nil }
         
-        guard !signals.isEmpty, let fromLayer = fromLayer else { return nil}
+        guard let fromLayer = fromLayer else { return nil}
         
         let millisecondsSinceStartedProcess = (startTimeOfProcess?.timeIntervalSinceNow ?? 0) * -1000
         

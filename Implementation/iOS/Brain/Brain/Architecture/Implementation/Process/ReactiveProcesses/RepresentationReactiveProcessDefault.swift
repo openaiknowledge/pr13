@@ -14,12 +14,12 @@ class RepresentationReactiveProcessDefault {
     var status: ProcessStatus = ProcessStatusDefault.idle
     var activities: WeakArray<Activity>
     var nextLayers = WeakArray<Layer>() // empty
-    var nextProcess: WeakArray<Process>
+    var nextProcess: [Process]
     
     init(model: ProcessModel, activities: [Activity], nextProcess: [Process]) {
         self.model = model
         self.activities = activities.weak()
-        self.nextProcess = nextProcess.weak()
+        self.nextProcess = nextProcess
     }
 }
 
@@ -45,9 +45,7 @@ extension RepresentationReactiveProcessDefault:  RepresentationReactiveProcess {
                 }
             }
             self.nextProcess.forEach {
-                if let process = $0() {
-                    process.exec(signal: input, fromLayer: fromLayer, fromProcess: self)
-                }
+                $0.exec(signal: input, fromLayer: fromLayer, fromProcess: self)
             }
         }
     }

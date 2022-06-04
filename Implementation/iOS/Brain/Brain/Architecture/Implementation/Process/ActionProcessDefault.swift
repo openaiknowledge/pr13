@@ -47,11 +47,11 @@ extension ActionProcessDefault:  ActionProcess {
                     switch $0() {
                     case let activity as MapperSignalToEventActivity:
                         event = activity.exec(signal: signal, fromLayer: fromLayer, fromProcess: self)
-                    case let activity as FilterActionActivity:
+                    case let activity as RepresentationOfEventActivity:
                         if let eventAux = event {
                             event = activity.exec(event: eventAux, fromLayer: fromLayer, fromProcess: self)
                         }
-                    case let activity as RepresentationOfEventActivity:
+                    case let activity as FilterActionActivity:
                         if let eventAux = event {
                             event = activity.exec(event: eventAux, fromLayer: fromLayer, fromProcess: self)
                         }
