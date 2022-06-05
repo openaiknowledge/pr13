@@ -17,7 +17,7 @@ class FilterActionActivityDefault {
 extension FilterActionActivityDefault: FilterActionActivity {
     func exec(event: Event, fromLayer: Layer, fromProcess: Process) -> Event? {
 //        TODO
-        if let brainData = BrainDataDefault.build(with: "FilterActionActivityDefault - testing") {
+        if let brainData = BrainDataDefault.build(with: "FilterActionActivityDefault: I don´t know") {
             return EventDefault(data: brainData, date: Date())
         } else {
             return nil

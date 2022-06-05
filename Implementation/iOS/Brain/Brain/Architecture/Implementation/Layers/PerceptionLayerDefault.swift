@@ -4,6 +4,8 @@
 //  Created by Miguel Gutierrez on 10/01/2022
 //
 // Default implementation of PerceptionLayer
+import Logging
+
 class PerceptionLayerDefault  {
     //
     let context: BrainContext
@@ -56,7 +58,8 @@ extension PerceptionLayerDefault: PerceptionLayer {
     }
     
     func event(_ event: Event) {
-        print("PerceptionLayerDefault - event: \(event)")
+        Logger(label: String(describing: self)).info("Event: \(event)")
+
         processes.forEach { process in
             process.exec(signal: event.signal, fromLayer: self, fromProcess: nil)
         }

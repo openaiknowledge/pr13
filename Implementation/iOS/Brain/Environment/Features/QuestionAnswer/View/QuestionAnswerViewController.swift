@@ -47,5 +47,16 @@ private extension QuestionAnswerViewController {
         presenter?.execute(text: text)
         
     }
+}
+// MARK: - EnvironmentView
+extension QuestionAnswerViewController: EnvironmentView {
+    func show(text: String) {
+        answerTextView.text = text
+//        showAlertController(titleAction: "TESTING", descriptionAction: text, titleOne: "Cancel", titleSecond: "OK")
+    }
+    
+    func show(image: UIImage) {
+//         TODO
+    }
     
 }

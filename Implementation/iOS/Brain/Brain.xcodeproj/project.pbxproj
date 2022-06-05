@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -93,6 +93,183 @@
 		BDC511E52843902000B96814 /* EnvironmentVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E42843902000B96814 /* EnvironmentVIPER.swift */; };
 		BDC511E72843937D00B96814 /* ImageSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E62843937D00B96814 /* ImageSystemDefault.swift */; };
 		BDD5EF0A2839084100BC97AF /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5EF092839084100BC97AF /* WeakArray.swift */; };
+		BDE49470284CA85C00FC5054 /* FilterActionActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BEB28453BAE001DBD9C /* FilterActionActivityDefault.swift */; };
+		BDE49471284CA85C00FC5054 /* BrainContextDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D5279D8291009B21BB /* BrainContextDefault.swift */; };
+		BDE49472284CA85C00FC5054 /* RepresentationOfEventActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BE928453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift */; };
+		BDE49473284CA85C00FC5054 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9BC279D773A009B21BB /* APIRouter.swift */; };
+		BDE49474284CA85C00FC5054 /* QuestionAnswerPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA77D39282FD93600ABA8D9 /* QuestionAnswerPresenterDefault.swift */; };
+		BDE49475284CA85C00FC5054 /* ProcessStatusDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82BF2832612F00086520 /* ProcessStatusDefault.swift */; };
+		BDE49476284CA85C00FC5054 /* QuestionAnswerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA77D36282FD86B00ABA8D9 /* QuestionAnswerProtocols.swift */; };
+		BDE49477284CA85C00FC5054 /* EnvironmentArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A99C279D6D4F009B21BB /* EnvironmentArchitecture.swift */; };
+		BDE49478284CA85C00FC5054 /* PerceptionLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7127A873C8009CB532 /* PerceptionLayerDefault.swift */; };
+		BDE49479284CA85C00FC5054 /* EnvironmentDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */; };
+		BDE4947A284CA85C00FC5054 /* ActionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BE7284538EA001DBD9C /* ActionLayer.swift */; };
+		BDE4947B284CA85C00FC5054 /* BrainArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C10279421F900BFE09C /* BrainArchitecture.swift */; };
+		BDE4947C284CA85C00FC5054 /* QuestionAnswerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE92792F48A00BFE09C /* QuestionAnswerConfigurator.swift */; };
+		BDE4947D284CA85C00FC5054 /* ConstantsStoreDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9C8279D798B009B21BB /* ConstantsStoreDefault.swift */; };
+		BDE4947E284CA85C00FC5054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595B802792F2EB00BFE09C /* AppDelegate.swift */; };
+		BDE4947F284CA85C00FC5054 /* DecisionReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C92842384D00B96814 /* DecisionReactiveProcessDefault.swift */; };
+		BDE49480284CA85C00FC5054 /* BrainDataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422C281E6F620037744C /* BrainDataDefault.swift */; };
+		BDE49481284CA85C00FC5054 /* ProactiveLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7227A873C8009CB532 /* ProactiveLayerDefault.swift */; };
+		BDE49482284CA85C00FC5054 /* EnvironmenVIPERDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E228438E9500B96814 /* EnvironmenVIPERDefault.swift */; };
+		BDE49483284CA85C00FC5054 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C032792F78700BFE09C /* MainRouter.swift */; };
+		BDE49484284CA85C00FC5054 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9AD279D772D009B21BB /* GenericError.swift */; };
+		BDE49485284CA85C00FC5054 /* EnvironmentVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E42843902000B96814 /* EnvironmentVIPER.swift */; };
+		BDE49486284CA85C00FC5054 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D328423D6B00B96814 /* DeductiveReasoningReactiveActivityDefault.swift */; };
+		BDE49487284CA85C00FC5054 /* LearningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D528423D6B00B96814 /* LearningReactiveActivityDefault.swift */; };
+		BDE49488284CA85C00FC5054 /* ProblemSolvingReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D628423D6B00B96814 /* ProblemSolvingReasoningReactiveActivityDefault.swift */; };
+		BDE49489284CA85C00FC5054 /* DependencyFactoryDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */; };
+		BDE4948A284CA85C00FC5054 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE64226281D59290037744C /* BaseViewController.swift */; };
+		BDE4948B284CA85C00FC5054 /* ProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82C328326D6500086520 /* ProcessDefault.swift */; };
+		BDE4948C284CA85C00FC5054 /* MaintenanceArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C87280C18C600504EC9 /* MaintenanceArchitecture.swift */; };
+		BDE4948D284CA85C00FC5054 /* ActionLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7427A873C8009CB532 /* ActionLayerDefault.swift */; };
+		BDE4948E284CA85C00FC5054 /* DecisionReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D728423D6B00B96814 /* DecisionReactiveActivityDefault.swift */; };
+		BDE4948F284CA85C00FC5054 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9A7279D72A0009B21BB /* DependencyFactory.swift */; };
+		BDE49490284CA85C00FC5054 /* CausalReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D828423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift */; };
+		BDE49491284CA85C00FC5054 /* RepresentationOfPerceptionSignalActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E028423EFD00B96814 /* RepresentationOfPerceptionSignalActivityDefault.swift */; };
+		BDE49492284CA85C00FC5054 /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE62792F48A00BFE09C /* QuestionAnswerViewController.swift */; };
+		BDE49493284CA85C00FC5054 /* ImageSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E62843937D00B96814 /* ImageSystemDefault.swift */; };
+		BDE49494284CA85C00FC5054 /* KModelProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88448627AAF90000F2CBFA /* KModelProcessDefault.swift */; };
+		BDE49495284CA85C00FC5054 /* ConstantsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9CB279D798B009B21BB /* ConstantsStore.swift */; };
+		BDE49496284CA85C00FC5054 /* SightSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422A281D62070037744C /* SightSystemDefault.swift */; };
+		BDE49497284CA85C00FC5054 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BFC2792F69600BFE09C /* AppModules.swift */; };
+		BDE49498284CA85C00FC5054 /* LearningLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F6F27A873C8009CB532 /* LearningLayerDefault.swift */; };
+		BDE49499284CA85C00FC5054 /* BrainMaintenanceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C89280C18C600504EC9 /* BrainMaintenanceDefault.swift */; };
+		BDE4949A284CA85C00FC5054 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9B9279D773A009B21BB /* APIClientDefault.swift */; };
+		BDE4949B284CA85C00FC5054 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9BA279D773A009B21BB /* APIClient.swift */; };
+		BDE4949C284CA85C00FC5054 /* MemoryLayerDefault .swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7327A873C8009CB532 /* MemoryLayerDefault .swift */; };
+		BDE4949D284CA85C00FC5054 /* CausalProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C72842384D00B96814 /* CausalProcessDefault.swift */; };
+		BDE4949E284CA85C00FC5054 /* ActionProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BEF2845407E001DBD9C /* ActionProcessDefault.swift */; };
+		BDE4949F284CA85C00FC5054 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9CA279D798B009B21BB /* UserDefaultsStorage.swift */; };
+		BDE494A0284CA85C00FC5054 /* RepresentationReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C62842384C00B96814 /* RepresentationReactiveProcessDefault.swift */; };
+		BDE494A1284CA85C00FC5054 /* KnowledgeLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9E3279D8C6A009B21BB /* KnowledgeLayerDefault.swift */; };
+		BDE494A2284CA85C00FC5054 /* RuntimeVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9C9279D798B009B21BB /* RuntimeVariables.swift */; };
+		BDE494A3284CA85C00FC5054 /* InductiveReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D228423D6B00B96814 /* InductiveReasoningReactiveActivityDefault.swift */; };
+		BDE494A4284CA85C00FC5054 /* ReactiveLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7027A873C8009CB532 /* ReactiveLayerDefault.swift */; };
+		BDE494A5284CA85C00FC5054 /* APIRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9BB279D773A009B21BB /* APIRoutable.swift */; };
+		BDE494A6284CA85C00FC5054 /* LearningReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C52842384C00B96814 /* LearningReactiveProcessDefault.swift */; };
+		BDE494A7284CA85C00FC5054 /* PerceptionProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C8D280C306100504EC9 /* PerceptionProcessDefault.swift */; };
+		BDE494A8284CA85C00FC5054 /* PerceptionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C8F280D772200504EC9 /* PerceptionLayer.swift */; };
+		BDE494A9284CA85C00FC5054 /* BaseViperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C092794212900BFE09C /* BaseViperProtocols.swift */; };
+		BDE494AA284CA85C00FC5054 /* ReactiveLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82BD283259C200086520 /* ReactiveLayer.swift */; };
+		BDE494AB284CA85C00FC5054 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D428423D6B00B96814 /* SynthesisReasoningReactiveActivityDefault.swift */; };
+		BDE494AC284CA85C00FC5054 /* MainRouterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C022792F78700BFE09C /* MainRouterDefault.swift */; };
+		BDE494AD284CA85C00FC5054 /* ReasoningReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C82842384D00B96814 /* ReasoningReactiveProcessDefault.swift */; };
+		BDE494AE284CA85C00FC5054 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595B822792F2EB00BFE09C /* SceneDelegate.swift */; };
+		BDE494AF284CA85C00FC5054 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5EF092839084100BC97AF /* WeakArray.swift */; };
+		BDE494B0284CA85C00FC5054 /* ProcessKModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C122794253800BFE09C /* ProcessKModel.swift */; };
+		BDE494B1284CA85C00FC5054 /* Process+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */; };
+		BDE494B2284CA85C00FC5054 /* MapperSignalToEventActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BED28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift */; };
+		BDE494B3284CA85C00FC5054 /* BrainDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D9279D879B009B21BB /* BrainDefault.swift */; };
+		BDE494B4284CA85C00FC5054 /* HasDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9A6279D72A0009B21BB /* HasDependencies.swift */; };
+		BDE494B7284CA85C00FC5054 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC42792F47E00BFE09C /* OpenSans-Italic.ttf */; };
+		BDE494B8284CA85C00FC5054 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC92792F47E00BFE09C /* OpenSans-ExtraBoldItalic.ttf */; };
+		BDE494B9284CA85C00FC5054 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC12792F47E00BFE09C /* OpenSans-CondLightItalic.ttf */; };
+		BDE494BA284CA85C00FC5054 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC72792F47E00BFE09C /* OpenSans-Bold.ttf */; };
+		BDE494BB284CA85C00FC5054 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC82792F47E00BFE09C /* OpenSans-SemiBoldItalic.ttf */; };
+		BDE494BC284CA85C00FC5054 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87595B892792F2ED00BFE09C /* Preview Assets.xcassets */; };
+		BDE494BD284CA85C00FC5054 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC32792F47E00BFE09C /* OpenSans-Light.ttf */; };
+		BDE494BE284CA85C00FC5054 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC22792F47E00BFE09C /* OpenSans-CondLight.ttf */; };
+		BDE494BF284CA85C00FC5054 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC62792F47E00BFE09C /* OpenSans-LightItalic.ttf */; };
+		BDE494C0284CA85C00FC5054 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87595BBB2792F47E00BFE09C /* Localizable.strings */; };
+		BDE494C1284CA85C00FC5054 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCA2792F47E00BFE09C /* OpenSans-Regular.ttf */; };
+		BDE494C2284CA85C00FC5054 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC02792F47E00BFE09C /* OpenSans-SemiBold.ttf */; };
+		BDE494C3284CA85C00FC5054 /* QuestionAnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87595BE72792F48A00BFE09C /* QuestionAnswerView.xib */; };
+		BDE494C4284CA85C00FC5054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87595BBD2792F47E00BFE09C /* Assets.xcassets */; };
+		BDE494C5284CA85C00FC5054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87595BB82792F47D00BFE09C /* LaunchScreen.storyboard */; };
+		BDE494C6284CA85C00FC5054 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCC2792F47E00BFE09C /* OpenSans-CondBold.ttf */; };
+		BDE494C7284CA85C00FC5054 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCB2792F47E00BFE09C /* OpenSans-BoldItalic.ttf */; };
+		BDE494C8284CA85C00FC5054 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC52792F47E00BFE09C /* OpenSans-ExtraBold.ttf */; };
+		BDE494D0284CA86300FC5054 /* FilterActionActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BEB28453BAE001DBD9C /* FilterActionActivityDefault.swift */; };
+		BDE494D1284CA86300FC5054 /* BrainContextDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D5279D8291009B21BB /* BrainContextDefault.swift */; };
+		BDE494D2284CA86300FC5054 /* RepresentationOfEventActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BE928453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift */; };
+		BDE494D3284CA86300FC5054 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9BC279D773A009B21BB /* APIRouter.swift */; };
+		BDE494D4284CA86300FC5054 /* QuestionAnswerPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA77D39282FD93600ABA8D9 /* QuestionAnswerPresenterDefault.swift */; };
+		BDE494D5284CA86300FC5054 /* ProcessStatusDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82BF2832612F00086520 /* ProcessStatusDefault.swift */; };
+		BDE494D6284CA86300FC5054 /* QuestionAnswerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA77D36282FD86B00ABA8D9 /* QuestionAnswerProtocols.swift */; };
+		BDE494D7284CA86300FC5054 /* EnvironmentArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A99C279D6D4F009B21BB /* EnvironmentArchitecture.swift */; };
+		BDE494D8284CA86300FC5054 /* PerceptionLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7127A873C8009CB532 /* PerceptionLayerDefault.swift */; };
+		BDE494D9284CA86300FC5054 /* EnvironmentDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */; };
+		BDE494DA284CA86300FC5054 /* ActionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BE7284538EA001DBD9C /* ActionLayer.swift */; };
+		BDE494DB284CA86300FC5054 /* BrainArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C10279421F900BFE09C /* BrainArchitecture.swift */; };
+		BDE494DC284CA86300FC5054 /* QuestionAnswerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE92792F48A00BFE09C /* QuestionAnswerConfigurator.swift */; };
+		BDE494DD284CA86300FC5054 /* ConstantsStoreDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9C8279D798B009B21BB /* ConstantsStoreDefault.swift */; };
+		BDE494DE284CA86300FC5054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595B802792F2EB00BFE09C /* AppDelegate.swift */; };
+		BDE494DF284CA86300FC5054 /* DecisionReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C92842384D00B96814 /* DecisionReactiveProcessDefault.swift */; };
+		BDE494E0284CA86300FC5054 /* BrainDataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422C281E6F620037744C /* BrainDataDefault.swift */; };
+		BDE494E1284CA86300FC5054 /* ProactiveLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7227A873C8009CB532 /* ProactiveLayerDefault.swift */; };
+		BDE494E2284CA86300FC5054 /* EnvironmenVIPERDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E228438E9500B96814 /* EnvironmenVIPERDefault.swift */; };
+		BDE494E3284CA86300FC5054 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C032792F78700BFE09C /* MainRouter.swift */; };
+		BDE494E4284CA86300FC5054 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9AD279D772D009B21BB /* GenericError.swift */; };
+		BDE494E5284CA86300FC5054 /* EnvironmentVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E42843902000B96814 /* EnvironmentVIPER.swift */; };
+		BDE494E6284CA86300FC5054 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D328423D6B00B96814 /* DeductiveReasoningReactiveActivityDefault.swift */; };
+		BDE494E7284CA86300FC5054 /* LearningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D528423D6B00B96814 /* LearningReactiveActivityDefault.swift */; };
+		BDE494E8284CA86300FC5054 /* ProblemSolvingReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D628423D6B00B96814 /* ProblemSolvingReasoningReactiveActivityDefault.swift */; };
+		BDE494E9284CA86300FC5054 /* DependencyFactoryDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF46281FDB6D001BFE5B /* DependencyFactoryDefault.swift */; };
+		BDE494EA284CA86300FC5054 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE64226281D59290037744C /* BaseViewController.swift */; };
+		BDE494EB284CA86300FC5054 /* ProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82C328326D6500086520 /* ProcessDefault.swift */; };
+		BDE494EC284CA86300FC5054 /* MaintenanceArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C87280C18C600504EC9 /* MaintenanceArchitecture.swift */; };
+		BDE494ED284CA86300FC5054 /* ActionLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7427A873C8009CB532 /* ActionLayerDefault.swift */; };
+		BDE494EE284CA86300FC5054 /* DecisionReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D728423D6B00B96814 /* DecisionReactiveActivityDefault.swift */; };
+		BDE494EF284CA86300FC5054 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9A7279D72A0009B21BB /* DependencyFactory.swift */; };
+		BDE494F0284CA86300FC5054 /* CausalReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D828423D6B00B96814 /* CausalReasoningReactiveActivityDefault.swift */; };
+		BDE494F1284CA86300FC5054 /* RepresentationOfPerceptionSignalActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E028423EFD00B96814 /* RepresentationOfPerceptionSignalActivityDefault.swift */; };
+		BDE494F2284CA86300FC5054 /* QuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BE62792F48A00BFE09C /* QuestionAnswerViewController.swift */; };
+		BDE494F3284CA86300FC5054 /* ImageSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511E62843937D00B96814 /* ImageSystemDefault.swift */; };
+		BDE494F4284CA86300FC5054 /* KModelProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88448627AAF90000F2CBFA /* KModelProcessDefault.swift */; };
+		BDE494F5284CA86300FC5054 /* ConstantsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9CB279D798B009B21BB /* ConstantsStore.swift */; };
+		BDE494F6284CA86300FC5054 /* SightSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422A281D62070037744C /* SightSystemDefault.swift */; };
+		BDE494F7284CA86300FC5054 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595BFC2792F69600BFE09C /* AppModules.swift */; };
+		BDE494F8284CA86300FC5054 /* LearningLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F6F27A873C8009CB532 /* LearningLayerDefault.swift */; };
+		BDE494F9284CA86300FC5054 /* BrainMaintenanceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C89280C18C600504EC9 /* BrainMaintenanceDefault.swift */; };
+		BDE494FA284CA86300FC5054 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9B9279D773A009B21BB /* APIClientDefault.swift */; };
+		BDE494FB284CA86300FC5054 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9BA279D773A009B21BB /* APIClient.swift */; };
+		BDE494FC284CA86300FC5054 /* MemoryLayerDefault .swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7327A873C8009CB532 /* MemoryLayerDefault .swift */; };
+		BDE494FD284CA86300FC5054 /* CausalProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C72842384D00B96814 /* CausalProcessDefault.swift */; };
+		BDE494FE284CA86300FC5054 /* ActionProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BEF2845407E001DBD9C /* ActionProcessDefault.swift */; };
+		BDE494FF284CA86300FC5054 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9CA279D798B009B21BB /* UserDefaultsStorage.swift */; };
+		BDE49500284CA86300FC5054 /* RepresentationReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C62842384C00B96814 /* RepresentationReactiveProcessDefault.swift */; };
+		BDE49501284CA86300FC5054 /* KnowledgeLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9E3279D8C6A009B21BB /* KnowledgeLayerDefault.swift */; };
+		BDE49502284CA86300FC5054 /* RuntimeVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9C9279D798B009B21BB /* RuntimeVariables.swift */; };
+		BDE49503284CA86300FC5054 /* InductiveReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D228423D6B00B96814 /* InductiveReasoningReactiveActivityDefault.swift */; };
+		BDE49504284CA86300FC5054 /* ReactiveLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E1F7027A873C8009CB532 /* ReactiveLayerDefault.swift */; };
+		BDE49505284CA86300FC5054 /* APIRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9BB279D773A009B21BB /* APIRoutable.swift */; };
+		BDE49506284CA86300FC5054 /* LearningReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C52842384C00B96814 /* LearningReactiveProcessDefault.swift */; };
+		BDE49507284CA86300FC5054 /* PerceptionProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C8D280C306100504EC9 /* PerceptionProcessDefault.swift */; };
+		BDE49508284CA86300FC5054 /* PerceptionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C8F280D772200504EC9 /* PerceptionLayer.swift */; };
+		BDE49509284CA86300FC5054 /* BaseViperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C092794212900BFE09C /* BaseViperProtocols.swift */; };
+		BDE4950A284CA86300FC5054 /* ReactiveLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE82BD283259C200086520 /* ReactiveLayer.swift */; };
+		BDE4950B284CA86300FC5054 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511D428423D6B00B96814 /* SynthesisReasoningReactiveActivityDefault.swift */; };
+		BDE4950C284CA86300FC5054 /* MainRouterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C022792F78700BFE09C /* MainRouterDefault.swift */; };
+		BDE4950D284CA86300FC5054 /* ReasoningReactiveProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC511C82842384D00B96814 /* ReasoningReactiveProcessDefault.swift */; };
+		BDE4950E284CA86300FC5054 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595B822792F2EB00BFE09C /* SceneDelegate.swift */; };
+		BDE4950F284CA86300FC5054 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5EF092839084100BC97AF /* WeakArray.swift */; };
+		BDE49510284CA86300FC5054 /* ProcessKModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87595C122794253800BFE09C /* ProcessKModel.swift */; };
+		BDE49511284CA86300FC5054 /* Process+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0DF4A281FEE89001BFE5B /* Process+extension.swift */; };
+		BDE49512284CA86300FC5054 /* MapperSignalToEventActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB50BED28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift */; };
+		BDE49513284CA86300FC5054 /* BrainDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D9279D879B009B21BB /* BrainDefault.swift */; };
+		BDE49514284CA86300FC5054 /* HasDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9A6279D72A0009B21BB /* HasDependencies.swift */; };
+		BDE49517284CA86300FC5054 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC42792F47E00BFE09C /* OpenSans-Italic.ttf */; };
+		BDE49518284CA86300FC5054 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC92792F47E00BFE09C /* OpenSans-ExtraBoldItalic.ttf */; };
+		BDE49519284CA86300FC5054 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC12792F47E00BFE09C /* OpenSans-CondLightItalic.ttf */; };
+		BDE4951A284CA86300FC5054 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC72792F47E00BFE09C /* OpenSans-Bold.ttf */; };
+		BDE4951B284CA86300FC5054 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC82792F47E00BFE09C /* OpenSans-SemiBoldItalic.ttf */; };
+		BDE4951C284CA86300FC5054 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87595B892792F2ED00BFE09C /* Preview Assets.xcassets */; };
+		BDE4951D284CA86300FC5054 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC32792F47E00BFE09C /* OpenSans-Light.ttf */; };
+		BDE4951E284CA86300FC5054 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC22792F47E00BFE09C /* OpenSans-CondLight.ttf */; };
+		BDE4951F284CA86300FC5054 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC62792F47E00BFE09C /* OpenSans-LightItalic.ttf */; };
+		BDE49520284CA86300FC5054 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87595BBB2792F47E00BFE09C /* Localizable.strings */; };
+		BDE49521284CA86300FC5054 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCA2792F47E00BFE09C /* OpenSans-Regular.ttf */; };
+		BDE49522284CA86300FC5054 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC02792F47E00BFE09C /* OpenSans-SemiBold.ttf */; };
+		BDE49523284CA86300FC5054 /* QuestionAnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87595BE72792F48A00BFE09C /* QuestionAnswerView.xib */; };
+		BDE49524284CA86300FC5054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87595BBD2792F47E00BFE09C /* Assets.xcassets */; };
+		BDE49525284CA86300FC5054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87595BB82792F47D00BFE09C /* LaunchScreen.storyboard */; };
+		BDE49526284CA86300FC5054 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCC2792F47E00BFE09C /* OpenSans-CondBold.ttf */; };
+		BDE49527284CA86300FC5054 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BCB2792F47E00BFE09C /* OpenSans-BoldItalic.ttf */; };
+		BDE49528284CA86300FC5054 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87595BC52792F47E00BFE09C /* OpenSans-ExtraBold.ttf */; };
+		BDE49534284CAEB400FC5054 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = BDE49533284CAEB400FC5054 /* Logging */; };
+		BDE49537284CAEE300FC5054 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = BDE49536284CAEE300FC5054 /* Logging */; };
+		BDE49539284CAEE900FC5054 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = BDE49538284CAEE900FC5054 /* Logging */; };
 		BDE64227281D59290037744C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE64226281D59290037744C /* BaseViewController.swift */; };
 		BDE6422B281D62070037744C /* SightSystemDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422A281D62070037744C /* SightSystemDefault.swift */; };
 		BDE6422D281E6F620037744C /* BrainDataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6422C281E6F620037744C /* BrainDataDefault.swift */; };
@@ -208,6 +385,10 @@
 		BDC511E42843902000B96814 /* EnvironmentVIPER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentVIPER.swift; sourceTree = "<group>"; };
 		BDC511E62843937D00B96814 /* ImageSystemDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSystemDefault.swift; sourceTree = "<group>"; };
 		BDD5EF092839084100BC97AF /* WeakArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
+		BDE494CC284CA85C00FC5054 /* Brain PRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain PRE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE494CD284CA85C00FC5054 /* Brain MOCK.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Brain MOCK.plist"; path = "/Users/miguelgutierrez/Documents/MGM/OpenAIKnowledge/pr13/Implementation/iOS/Brain/Brain MOCK.plist"; sourceTree = "<absolute>"; };
+		BDE4952C284CA86300FC5054 /* Brain MOCK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain MOCK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE4952D284CA86300FC5054 /* Brain PRE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Brain PRE.plist"; path = "/Users/miguelgutierrez/Documents/MGM/OpenAIKnowledge/pr13/Implementation/iOS/Brain/Brain PRE.plist"; sourceTree = "<absolute>"; };
 		BDE64226281D59290037744C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDE6422A281D62070037744C /* SightSystemDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SightSystemDefault.swift; sourceTree = "<group>"; };
 		BDE6422C281E6F620037744C /* BrainDataDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainDataDefault.swift; sourceTree = "<group>"; };
@@ -218,6 +399,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE49539284CAEE900FC5054 /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +417,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDE494B5284CA85C00FC5054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE49534284CAEB400FC5054 /* Logging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE49515284CA86300FC5054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE49537284CAEE300FC5054 /* Logging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -246,9 +444,13 @@
 				BD43A9A5279D72A0009B21BB /* Dependency */,
 				BDB0DF4C281FF0DD001BFE5B /* Common */,
 				BD700C83280C18C600504EC9 /* BrainMaintenance */,
+				BDE4952E284CAB6600FC5054 /* Configuration */,
 				87595B962792F2ED00BFE09C /* BrainTests */,
 				87595BA12792F2ED00BFE09C /* BrainUITests */,
 				87595B7E2792F2EB00BFE09C /* Products */,
+				BDE494CD284CA85C00FC5054 /* Brain MOCK.plist */,
+				BDE4952D284CA86300FC5054 /* Brain PRE.plist */,
+				BDE49535284CAEE300FC5054 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,6 +460,8 @@
 				87595B7D2792F2EB00BFE09C /* Brain.app */,
 				87595B932792F2ED00BFE09C /* BrainTests.xctest */,
 				87595B9E2792F2ED00BFE09C /* BrainUITests.xctest */,
+				BDE494CC284CA85C00FC5054 /* Brain PRE.app */,
+				BDE4952C284CA86300FC5054 /* Brain MOCK.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -763,6 +967,44 @@
 			path = BaseComponents;
 			sourceTree = "<group>";
 		};
+		BDE4952E284CAB6600FC5054 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4952F284CAB6600FC5054 /* PRO */,
+				BDE49530284CAB6600FC5054 /* MOCK */,
+				BDE49531284CAB6600FC5054 /* PRE */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BDE4952F284CAB6600FC5054 /* PRO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PRO;
+			sourceTree = "<group>";
+		};
+		BDE49530284CAB6600FC5054 /* MOCK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MOCK;
+			sourceTree = "<group>";
+		};
+		BDE49531284CAB6600FC5054 /* PRE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PRE;
+			sourceTree = "<group>";
+		};
+		BDE49535284CAEE300FC5054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BDE64225281D59170037744C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,6 +1029,9 @@
 			dependencies = (
 			);
 			name = Brain;
+			packageProductDependencies = (
+				BDE49538284CAEE900FC5054 /* Logging */,
+			);
 			productName = Brain;
 			productReference = 87595B7D2792F2EB00BFE09C /* Brain.app */;
 			productType = "com.apple.product-type.application";
@@ -827,6 +1072,46 @@
 			productReference = 87595B9E2792F2ED00BFE09C /* BrainUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BDE4946E284CA85C00FC5054 /* Brain PRE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE494C9284CA85C00FC5054 /* Build configuration list for PBXNativeTarget "Brain PRE" */;
+			buildPhases = (
+				BDE4946F284CA85C00FC5054 /* Sources */,
+				BDE494B5284CA85C00FC5054 /* Frameworks */,
+				BDE494B6284CA85C00FC5054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Brain PRE";
+			packageProductDependencies = (
+				BDE49533284CAEB400FC5054 /* Logging */,
+			);
+			productName = Brain;
+			productReference = BDE494CC284CA85C00FC5054 /* Brain PRE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDE494CE284CA86300FC5054 /* Brain MOCK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE49529284CA86300FC5054 /* Build configuration list for PBXNativeTarget "Brain MOCK" */;
+			buildPhases = (
+				BDE494CF284CA86300FC5054 /* Sources */,
+				BDE49515284CA86300FC5054 /* Frameworks */,
+				BDE49516284CA86300FC5054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Brain MOCK";
+			packageProductDependencies = (
+				BDE49536284CAEE300FC5054 /* Logging */,
+			);
+			productName = Brain;
+			productReference = BDE4952C284CA86300FC5054 /* Brain MOCK.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -859,10 +1144,15 @@
 				Base,
 			);
 			mainGroup = 87595B742792F2EB00BFE09C;
+			packageReferences = (
+				BDE49532284CAEB400FC5054 /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
 			productRefGroup = 87595B7E2792F2EB00BFE09C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BDE4946E284CA85C00FC5054 /* Brain PRE */,
+				BDE494CE284CA86300FC5054 /* Brain MOCK */,
 				87595B7C2792F2EB00BFE09C /* Brain */,
 				87595B922792F2ED00BFE09C /* BrainTests */,
 				87595B9D2792F2ED00BFE09C /* BrainUITests */,
@@ -907,6 +1197,56 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE494B6284CA85C00FC5054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE494B7284CA85C00FC5054 /* OpenSans-Italic.ttf in Resources */,
+				BDE494B8284CA85C00FC5054 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				BDE494B9284CA85C00FC5054 /* OpenSans-CondLightItalic.ttf in Resources */,
+				BDE494BA284CA85C00FC5054 /* OpenSans-Bold.ttf in Resources */,
+				BDE494BB284CA85C00FC5054 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				BDE494BC284CA85C00FC5054 /* Preview Assets.xcassets in Resources */,
+				BDE494BD284CA85C00FC5054 /* OpenSans-Light.ttf in Resources */,
+				BDE494BE284CA85C00FC5054 /* OpenSans-CondLight.ttf in Resources */,
+				BDE494BF284CA85C00FC5054 /* OpenSans-LightItalic.ttf in Resources */,
+				BDE494C0284CA85C00FC5054 /* Localizable.strings in Resources */,
+				BDE494C1284CA85C00FC5054 /* OpenSans-Regular.ttf in Resources */,
+				BDE494C2284CA85C00FC5054 /* OpenSans-SemiBold.ttf in Resources */,
+				BDE494C3284CA85C00FC5054 /* QuestionAnswerView.xib in Resources */,
+				BDE494C4284CA85C00FC5054 /* Assets.xcassets in Resources */,
+				BDE494C5284CA85C00FC5054 /* LaunchScreen.storyboard in Resources */,
+				BDE494C6284CA85C00FC5054 /* OpenSans-CondBold.ttf in Resources */,
+				BDE494C7284CA85C00FC5054 /* OpenSans-BoldItalic.ttf in Resources */,
+				BDE494C8284CA85C00FC5054 /* OpenSans-ExtraBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE49516284CA86300FC5054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE49517284CA86300FC5054 /* OpenSans-Italic.ttf in Resources */,
+				BDE49518284CA86300FC5054 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				BDE49519284CA86300FC5054 /* OpenSans-CondLightItalic.ttf in Resources */,
+				BDE4951A284CA86300FC5054 /* OpenSans-Bold.ttf in Resources */,
+				BDE4951B284CA86300FC5054 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				BDE4951C284CA86300FC5054 /* Preview Assets.xcassets in Resources */,
+				BDE4951D284CA86300FC5054 /* OpenSans-Light.ttf in Resources */,
+				BDE4951E284CA86300FC5054 /* OpenSans-CondLight.ttf in Resources */,
+				BDE4951F284CA86300FC5054 /* OpenSans-LightItalic.ttf in Resources */,
+				BDE49520284CA86300FC5054 /* Localizable.strings in Resources */,
+				BDE49521284CA86300FC5054 /* OpenSans-Regular.ttf in Resources */,
+				BDE49522284CA86300FC5054 /* OpenSans-SemiBold.ttf in Resources */,
+				BDE49523284CA86300FC5054 /* QuestionAnswerView.xib in Resources */,
+				BDE49524284CA86300FC5054 /* Assets.xcassets in Resources */,
+				BDE49525284CA86300FC5054 /* LaunchScreen.storyboard in Resources */,
+				BDE49526284CA86300FC5054 /* OpenSans-CondBold.ttf in Resources */,
+				BDE49527284CA86300FC5054 /* OpenSans-BoldItalic.ttf in Resources */,
+				BDE49528284CA86300FC5054 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1342,158 @@
 			buildActionMask = 2147483647;
 			files = (
 				87595BA32792F2ED00BFE09C /* BrainUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE4946F284CA85C00FC5054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE49470284CA85C00FC5054 /* FilterActionActivityDefault.swift in Sources */,
+				BDE49471284CA85C00FC5054 /* BrainContextDefault.swift in Sources */,
+				BDE49472284CA85C00FC5054 /* RepresentationOfEventActivityDefault.swift in Sources */,
+				BDE49473284CA85C00FC5054 /* APIRouter.swift in Sources */,
+				BDE49474284CA85C00FC5054 /* QuestionAnswerPresenterDefault.swift in Sources */,
+				BDE49475284CA85C00FC5054 /* ProcessStatusDefault.swift in Sources */,
+				BDE49476284CA85C00FC5054 /* QuestionAnswerProtocols.swift in Sources */,
+				BDE49477284CA85C00FC5054 /* EnvironmentArchitecture.swift in Sources */,
+				BDE49478284CA85C00FC5054 /* PerceptionLayerDefault.swift in Sources */,
+				BDE49479284CA85C00FC5054 /* EnvironmentDefault.swift in Sources */,
+				BDE4947A284CA85C00FC5054 /* ActionLayer.swift in Sources */,
+				BDE4947B284CA85C00FC5054 /* BrainArchitecture.swift in Sources */,
+				BDE4947C284CA85C00FC5054 /* QuestionAnswerConfigurator.swift in Sources */,
+				BDE4947D284CA85C00FC5054 /* ConstantsStoreDefault.swift in Sources */,
+				BDE4947E284CA85C00FC5054 /* AppDelegate.swift in Sources */,
+				BDE4947F284CA85C00FC5054 /* DecisionReactiveProcessDefault.swift in Sources */,
+				BDE49480284CA85C00FC5054 /* BrainDataDefault.swift in Sources */,
+				BDE49481284CA85C00FC5054 /* ProactiveLayerDefault.swift in Sources */,
+				BDE49482284CA85C00FC5054 /* EnvironmenVIPERDefault.swift in Sources */,
+				BDE49483284CA85C00FC5054 /* MainRouter.swift in Sources */,
+				BDE49484284CA85C00FC5054 /* GenericError.swift in Sources */,
+				BDE49485284CA85C00FC5054 /* EnvironmentVIPER.swift in Sources */,
+				BDE49486284CA85C00FC5054 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */,
+				BDE49487284CA85C00FC5054 /* LearningReactiveActivityDefault.swift in Sources */,
+				BDE49488284CA85C00FC5054 /* ProblemSolvingReasoningReactiveActivityDefault.swift in Sources */,
+				BDE49489284CA85C00FC5054 /* DependencyFactoryDefault.swift in Sources */,
+				BDE4948A284CA85C00FC5054 /* BaseViewController.swift in Sources */,
+				BDE4948B284CA85C00FC5054 /* ProcessDefault.swift in Sources */,
+				BDE4948C284CA85C00FC5054 /* MaintenanceArchitecture.swift in Sources */,
+				BDE4948D284CA85C00FC5054 /* ActionLayerDefault.swift in Sources */,
+				BDE4948E284CA85C00FC5054 /* DecisionReactiveActivityDefault.swift in Sources */,
+				BDE4948F284CA85C00FC5054 /* DependencyFactory.swift in Sources */,
+				BDE49490284CA85C00FC5054 /* CausalReasoningReactiveActivityDefault.swift in Sources */,
+				BDE49491284CA85C00FC5054 /* RepresentationOfPerceptionSignalActivityDefault.swift in Sources */,
+				BDE49492284CA85C00FC5054 /* QuestionAnswerViewController.swift in Sources */,
+				BDE49493284CA85C00FC5054 /* ImageSystemDefault.swift in Sources */,
+				BDE49494284CA85C00FC5054 /* KModelProcessDefault.swift in Sources */,
+				BDE49495284CA85C00FC5054 /* ConstantsStore.swift in Sources */,
+				BDE49496284CA85C00FC5054 /* SightSystemDefault.swift in Sources */,
+				BDE49497284CA85C00FC5054 /* AppModules.swift in Sources */,
+				BDE49498284CA85C00FC5054 /* LearningLayerDefault.swift in Sources */,
+				BDE49499284CA85C00FC5054 /* BrainMaintenanceDefault.swift in Sources */,
+				BDE4949A284CA85C00FC5054 /* APIClientDefault.swift in Sources */,
+				BDE4949B284CA85C00FC5054 /* APIClient.swift in Sources */,
+				BDE4949C284CA85C00FC5054 /* MemoryLayerDefault .swift in Sources */,
+				BDE4949D284CA85C00FC5054 /* CausalProcessDefault.swift in Sources */,
+				BDE4949E284CA85C00FC5054 /* ActionProcessDefault.swift in Sources */,
+				BDE4949F284CA85C00FC5054 /* UserDefaultsStorage.swift in Sources */,
+				BDE494A0284CA85C00FC5054 /* RepresentationReactiveProcessDefault.swift in Sources */,
+				BDE494A1284CA85C00FC5054 /* KnowledgeLayerDefault.swift in Sources */,
+				BDE494A2284CA85C00FC5054 /* RuntimeVariables.swift in Sources */,
+				BDE494A3284CA85C00FC5054 /* InductiveReasoningReactiveActivityDefault.swift in Sources */,
+				BDE494A4284CA85C00FC5054 /* ReactiveLayerDefault.swift in Sources */,
+				BDE494A5284CA85C00FC5054 /* APIRoutable.swift in Sources */,
+				BDE494A6284CA85C00FC5054 /* LearningReactiveProcessDefault.swift in Sources */,
+				BDE494A7284CA85C00FC5054 /* PerceptionProcessDefault.swift in Sources */,
+				BDE494A8284CA85C00FC5054 /* PerceptionLayer.swift in Sources */,
+				BDE494A9284CA85C00FC5054 /* BaseViperProtocols.swift in Sources */,
+				BDE494AA284CA85C00FC5054 /* ReactiveLayer.swift in Sources */,
+				BDE494AB284CA85C00FC5054 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */,
+				BDE494AC284CA85C00FC5054 /* MainRouterDefault.swift in Sources */,
+				BDE494AD284CA85C00FC5054 /* ReasoningReactiveProcessDefault.swift in Sources */,
+				BDE494AE284CA85C00FC5054 /* SceneDelegate.swift in Sources */,
+				BDE494AF284CA85C00FC5054 /* WeakArray.swift in Sources */,
+				BDE494B0284CA85C00FC5054 /* ProcessKModel.swift in Sources */,
+				BDE494B1284CA85C00FC5054 /* Process+extension.swift in Sources */,
+				BDE494B2284CA85C00FC5054 /* MapperSignalToEventActivityDefault.swift in Sources */,
+				BDE494B3284CA85C00FC5054 /* BrainDefault.swift in Sources */,
+				BDE494B4284CA85C00FC5054 /* HasDependencies.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE494CF284CA86300FC5054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE494D0284CA86300FC5054 /* FilterActionActivityDefault.swift in Sources */,
+				BDE494D1284CA86300FC5054 /* BrainContextDefault.swift in Sources */,
+				BDE494D2284CA86300FC5054 /* RepresentationOfEventActivityDefault.swift in Sources */,
+				BDE494D3284CA86300FC5054 /* APIRouter.swift in Sources */,
+				BDE494D4284CA86300FC5054 /* QuestionAnswerPresenterDefault.swift in Sources */,
+				BDE494D5284CA86300FC5054 /* ProcessStatusDefault.swift in Sources */,
+				BDE494D6284CA86300FC5054 /* QuestionAnswerProtocols.swift in Sources */,
+				BDE494D7284CA86300FC5054 /* EnvironmentArchitecture.swift in Sources */,
+				BDE494D8284CA86300FC5054 /* PerceptionLayerDefault.swift in Sources */,
+				BDE494D9284CA86300FC5054 /* EnvironmentDefault.swift in Sources */,
+				BDE494DA284CA86300FC5054 /* ActionLayer.swift in Sources */,
+				BDE494DB284CA86300FC5054 /* BrainArchitecture.swift in Sources */,
+				BDE494DC284CA86300FC5054 /* QuestionAnswerConfigurator.swift in Sources */,
+				BDE494DD284CA86300FC5054 /* ConstantsStoreDefault.swift in Sources */,
+				BDE494DE284CA86300FC5054 /* AppDelegate.swift in Sources */,
+				BDE494DF284CA86300FC5054 /* DecisionReactiveProcessDefault.swift in Sources */,
+				BDE494E0284CA86300FC5054 /* BrainDataDefault.swift in Sources */,
+				BDE494E1284CA86300FC5054 /* ProactiveLayerDefault.swift in Sources */,
+				BDE494E2284CA86300FC5054 /* EnvironmenVIPERDefault.swift in Sources */,
+				BDE494E3284CA86300FC5054 /* MainRouter.swift in Sources */,
+				BDE494E4284CA86300FC5054 /* GenericError.swift in Sources */,
+				BDE494E5284CA86300FC5054 /* EnvironmentVIPER.swift in Sources */,
+				BDE494E6284CA86300FC5054 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */,
+				BDE494E7284CA86300FC5054 /* LearningReactiveActivityDefault.swift in Sources */,
+				BDE494E8284CA86300FC5054 /* ProblemSolvingReasoningReactiveActivityDefault.swift in Sources */,
+				BDE494E9284CA86300FC5054 /* DependencyFactoryDefault.swift in Sources */,
+				BDE494EA284CA86300FC5054 /* BaseViewController.swift in Sources */,
+				BDE494EB284CA86300FC5054 /* ProcessDefault.swift in Sources */,
+				BDE494EC284CA86300FC5054 /* MaintenanceArchitecture.swift in Sources */,
+				BDE494ED284CA86300FC5054 /* ActionLayerDefault.swift in Sources */,
+				BDE494EE284CA86300FC5054 /* DecisionReactiveActivityDefault.swift in Sources */,
+				BDE494EF284CA86300FC5054 /* DependencyFactory.swift in Sources */,
+				BDE494F0284CA86300FC5054 /* CausalReasoningReactiveActivityDefault.swift in Sources */,
+				BDE494F1284CA86300FC5054 /* RepresentationOfPerceptionSignalActivityDefault.swift in Sources */,
+				BDE494F2284CA86300FC5054 /* QuestionAnswerViewController.swift in Sources */,
+				BDE494F3284CA86300FC5054 /* ImageSystemDefault.swift in Sources */,
+				BDE494F4284CA86300FC5054 /* KModelProcessDefault.swift in Sources */,
+				BDE494F5284CA86300FC5054 /* ConstantsStore.swift in Sources */,
+				BDE494F6284CA86300FC5054 /* SightSystemDefault.swift in Sources */,
+				BDE494F7284CA86300FC5054 /* AppModules.swift in Sources */,
+				BDE494F8284CA86300FC5054 /* LearningLayerDefault.swift in Sources */,
+				BDE494F9284CA86300FC5054 /* BrainMaintenanceDefault.swift in Sources */,
+				BDE494FA284CA86300FC5054 /* APIClientDefault.swift in Sources */,
+				BDE494FB284CA86300FC5054 /* APIClient.swift in Sources */,
+				BDE494FC284CA86300FC5054 /* MemoryLayerDefault .swift in Sources */,
+				BDE494FD284CA86300FC5054 /* CausalProcessDefault.swift in Sources */,
+				BDE494FE284CA86300FC5054 /* ActionProcessDefault.swift in Sources */,
+				BDE494FF284CA86300FC5054 /* UserDefaultsStorage.swift in Sources */,
+				BDE49500284CA86300FC5054 /* RepresentationReactiveProcessDefault.swift in Sources */,
+				BDE49501284CA86300FC5054 /* KnowledgeLayerDefault.swift in Sources */,
+				BDE49502284CA86300FC5054 /* RuntimeVariables.swift in Sources */,
+				BDE49503284CA86300FC5054 /* InductiveReasoningReactiveActivityDefault.swift in Sources */,
+				BDE49504284CA86300FC5054 /* ReactiveLayerDefault.swift in Sources */,
+				BDE49505284CA86300FC5054 /* APIRoutable.swift in Sources */,
+				BDE49506284CA86300FC5054 /* LearningReactiveProcessDefault.swift in Sources */,
+				BDE49507284CA86300FC5054 /* PerceptionProcessDefault.swift in Sources */,
+				BDE49508284CA86300FC5054 /* PerceptionLayer.swift in Sources */,
+				BDE49509284CA86300FC5054 /* BaseViperProtocols.swift in Sources */,
+				BDE4950A284CA86300FC5054 /* ReactiveLayer.swift in Sources */,
+				BDE4950B284CA86300FC5054 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */,
+				BDE4950C284CA86300FC5054 /* MainRouterDefault.swift in Sources */,
+				BDE4950D284CA86300FC5054 /* ReasoningReactiveProcessDefault.swift in Sources */,
+				BDE4950E284CA86300FC5054 /* SceneDelegate.swift in Sources */,
+				BDE4950F284CA86300FC5054 /* WeakArray.swift in Sources */,
+				BDE49510284CA86300FC5054 /* ProcessKModel.swift in Sources */,
+				BDE49511284CA86300FC5054 /* Process+extension.swift in Sources */,
+				BDE49512284CA86300FC5054 /* MapperSignalToEventActivityDefault.swift in Sources */,
+				BDE49513284CA86300FC5054 /* BrainDefault.swift in Sources */,
+				BDE49514284CA86300FC5054 /* HasDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1276,6 +1768,90 @@
 			};
 			name = Release;
 		};
+		BDE494CA284CA85C00FC5054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Brain/Preview Content\"";
+				DEVELOPMENT_TEAM = ZDT46QEPYG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Brain PRE.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openaiknowledge.Brain.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDE494CB284CA85C00FC5054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Brain/Preview Content\"";
+				DEVELOPMENT_TEAM = ZDT46QEPYG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Brain PRE.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openaiknowledge.Brain.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDE4952A284CA86300FC5054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Brain/Preview Content\"";
+				DEVELOPMENT_TEAM = ZDT46QEPYG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Brain MOCK.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openaiknowledge.Brain.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDE4952B284CA86300FC5054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Brain/Preview Content\"";
+				DEVELOPMENT_TEAM = ZDT46QEPYG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Brain MOCK.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openaiknowledge.Brain.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1315,7 +1891,54 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BDE494C9284CA85C00FC5054 /* Build configuration list for PBXNativeTarget "Brain PRE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE494CA284CA85C00FC5054 /* Debug */,
+				BDE494CB284CA85C00FC5054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE49529284CA86300FC5054 /* Build configuration list for PBXNativeTarget "Brain MOCK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE4952A284CA86300FC5054 /* Debug */,
+				BDE4952B284CA86300FC5054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDE49532284CAEB400FC5054 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDE49533284CAEB400FC5054 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE49532284CAEB400FC5054 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		BDE49536284CAEE300FC5054 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE49532284CAEB400FC5054 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		BDE49538284CAEE900FC5054 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE49532284CAEB400FC5054 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87595B752792F2EB00BFE09C /* Project object */;
 }

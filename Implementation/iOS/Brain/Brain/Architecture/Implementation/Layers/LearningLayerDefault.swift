@@ -4,6 +4,8 @@
 //  Created by Miguel Gutierrez on 10/01/2022
 //
 // Default implementation of LearningLayer
+import Logging
+
 class LearningLayerDefault {
     let context: BrainContext
     var processes = [Process]()
@@ -16,8 +18,7 @@ class LearningLayerDefault {
 // MARK: - LearningLayer
 extension LearningLayerDefault: LearningLayer {
     func signal(_ signal: Signal, fromLayer: Layer, fromProcess: Process) {
-        print("LearningLayerDefault - signal: \(signal)")
-
+        Logger(label: String(describing: self)).info("Signal: \(signal)")
     }
     
 }

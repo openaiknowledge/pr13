@@ -1,0 +1,45 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+def default_pods
+  # ------ Lottie--------------------------------------------------
+  pod 'lottie-ios','3.1.8'
+
+end
+
+target 'Brain PRE' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Brain PRE
+  default_pods
+end
+
+target 'Brain MOCK' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Brain MOCK
+  default_pods
+end
+
+target 'Brain' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Brain
+  default_pods
+end
+
+target 'BrainTests' do
+#  default_pods
+ inherit! :search_paths
+end
+
+
+target 'BrainUITests' do
+#  default_pods
+ inherit! :search_paths
+end

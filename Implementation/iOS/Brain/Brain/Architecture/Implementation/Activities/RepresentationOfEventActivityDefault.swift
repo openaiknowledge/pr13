@@ -16,7 +16,7 @@ class RepresentationOfEventActivityDefault {
 extension RepresentationOfEventActivityDefault: RepresentationOfEventActivity {
     func exec(event: Event, fromLayer: Layer, fromProcess: Process) -> Event? {
         //        TODO
-        if let brainData = BrainDataDefault.build(with: "FilterActionActivityDefault - testing") {
+        if let brainData = BrainDataDefault.build(with: "RepresentationOfEventActivityDefault - testing") {
             return EventDefault(data: brainData, date: Date())
         } else {
             return nil
