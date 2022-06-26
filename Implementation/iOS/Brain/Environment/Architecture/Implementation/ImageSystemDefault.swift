@@ -26,6 +26,8 @@ extension ImageOutputControllerDefault: ImageOutputController {
                 }
             case .image(let imageType):
                 break
+            default:
+                break
             }
 
         }

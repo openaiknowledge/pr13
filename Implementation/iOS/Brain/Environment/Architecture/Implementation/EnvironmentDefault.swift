@@ -44,6 +44,11 @@ struct EventDefault: Event {
     let date: Date
     let signal: Signal
 
+    init(signal: Signal) {
+        self.signal = signal
+        self.date = Date()
+    }
+
     init(data: BrainData, date: Date) {
         self.signal = SignalDefault(messages: [data], processStatus: [])
         self.date = date

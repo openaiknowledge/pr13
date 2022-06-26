@@ -31,7 +31,7 @@ extension SightInputControllerDefault: SightInputController {
     }
     
     func input(text: String) {
-        let encoding = BrainDataDefault.Constant.txtEncodingDefault
+        let encoding = BrainDataDefault.Constants.txtEncodingDefault
         guard let data = text.data(using: encoding) else { return }
         
         let brainData = BrainDataDefault(type: .text, encoding: .txt(encoding), data: data)

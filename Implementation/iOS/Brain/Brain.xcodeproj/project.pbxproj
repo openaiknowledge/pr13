@@ -53,6 +53,33 @@
 		BD43A9DA279D879B009B21BB /* BrainDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9D9279D879B009B21BB /* BrainDefault.swift */; };
 		BD43A9DF279D8AAD009B21BB /* EnvironmentDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */; };
 		BD43A9E6279D8C6A009B21BB /* KnowledgeLayerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43A9E3279D8C6A009B21BB /* KnowledgeLayerDefault.swift */; };
+		BD5359D128687A610074D213 /* QuestionAnsweringBERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359C828687A610074D213 /* QuestionAnsweringBERT.swift */; };
+		BD5359D228687A610074D213 /* QuestionAnsweringBERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359C828687A610074D213 /* QuestionAnsweringBERT.swift */; };
+		BD5359D328687A610074D213 /* QuestionAnsweringBERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359C828687A610074D213 /* QuestionAnsweringBERT.swift */; };
+		BD5359D428687A610074D213 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359C928687A610074D213 /* BERTInput.swift */; };
+		BD5359D528687A610074D213 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359C928687A610074D213 /* BERTInput.swift */; };
+		BD5359D628687A610074D213 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359C928687A610074D213 /* BERTInput.swift */; };
+		BD5359D728687A610074D213 /* BERTQAFP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CA28687A610074D213 /* BERTQAFP16.mlmodel */; };
+		BD5359D828687A610074D213 /* BERTQAFP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CA28687A610074D213 /* BERTQAFP16.mlmodel */; };
+		BD5359D928687A610074D213 /* BERTQAFP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CA28687A610074D213 /* BERTQAFP16.mlmodel */; };
+		BD5359DA28687A610074D213 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD5359CB28687A610074D213 /* bert-base-uncased-vocab.txt */; };
+		BD5359DB28687A610074D213 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD5359CB28687A610074D213 /* bert-base-uncased-vocab.txt */; };
+		BD5359DC28687A610074D213 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD5359CB28687A610074D213 /* bert-base-uncased-vocab.txt */; };
+		BD5359DD28687A610074D213 /* BERTOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CC28687A610074D213 /* BERTOutput.swift */; };
+		BD5359DE28687A610074D213 /* BERTOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CC28687A610074D213 /* BERTOutput.swift */; };
+		BD5359DF28687A610074D213 /* BERTOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CC28687A610074D213 /* BERTOutput.swift */; };
+		BD5359E028687A610074D213 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CD28687A610074D213 /* BERTVocabulary.swift */; };
+		BD5359E128687A610074D213 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CD28687A610074D213 /* BERTVocabulary.swift */; };
+		BD5359E228687A610074D213 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CD28687A610074D213 /* BERTVocabulary.swift */; };
+		BD5359E328687A610074D213 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CE28687A610074D213 /* TokenizedString.swift */; };
+		BD5359E428687A610074D213 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CE28687A610074D213 /* TokenizedString.swift */; };
+		BD5359E528687A610074D213 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CE28687A610074D213 /* TokenizedString.swift */; };
+		BD5359E628687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CF28687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift */; };
+		BD5359E728687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CF28687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift */; };
+		BD5359E828687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359CF28687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift */; };
+		BD5359E928687A610074D213 /* QuestionAnswering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359D028687A610074D213 /* QuestionAnswering.swift */; };
+		BD5359EA28687A610074D213 /* QuestionAnswering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359D028687A610074D213 /* QuestionAnswering.swift */; };
+		BD5359EB28687A610074D213 /* QuestionAnswering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5359D028687A610074D213 /* QuestionAnswering.swift */; };
 		BD700C8A280C18C600504EC9 /* MaintenanceArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C87280C18C600504EC9 /* MaintenanceArchitecture.swift */; };
 		BD700C8B280C18C600504EC9 /* BrainMaintenanceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C89280C18C600504EC9 /* BrainMaintenanceDefault.swift */; };
 		BD700C8E280C306100504EC9 /* PerceptionProcessDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700C8D280C306100504EC9 /* PerceptionProcessDefault.swift */; };
@@ -345,6 +372,15 @@
 		BD43A9D9279D879B009B21BB /* BrainDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainDefault.swift; sourceTree = "<group>"; };
 		BD43A9DD279D8AAD009B21BB /* EnvironmentDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentDefault.swift; sourceTree = "<group>"; };
 		BD43A9E3279D8C6A009B21BB /* KnowledgeLayerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowledgeLayerDefault.swift; sourceTree = "<group>"; };
+		BD5359C828687A610074D213 /* QuestionAnsweringBERT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnsweringBERT.swift; sourceTree = "<group>"; };
+		BD5359C928687A610074D213 /* BERTInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTInput.swift; sourceTree = "<group>"; };
+		BD5359CA28687A610074D213 /* BERTQAFP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BERTQAFP16.mlmodel; sourceTree = "<group>"; };
+		BD5359CB28687A610074D213 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
+		BD5359CC28687A610074D213 /* BERTOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTOutput.swift; sourceTree = "<group>"; };
+		BD5359CD28687A610074D213 /* BERTVocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTVocabulary.swift; sourceTree = "<group>"; };
+		BD5359CE28687A610074D213 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
+		BD5359CF28687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnsweringReactiveActivityDefault.swift; sourceTree = "<group>"; };
+		BD5359D028687A610074D213 /* QuestionAnswering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAnswering.swift; sourceTree = "<group>"; };
 		BD700C87280C18C600504EC9 /* MaintenanceArchitecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceArchitecture.swift; sourceTree = "<group>"; };
 		BD700C89280C18C600504EC9 /* BrainMaintenanceDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainMaintenanceDefault.swift; sourceTree = "<group>"; };
 		BD700C8D280C306100504EC9 /* PerceptionProcessDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerceptionProcessDefault.swift; sourceTree = "<group>"; };
@@ -813,6 +849,38 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		BD5359C528687A610074D213 /* QuestionAnswering */ = {
+			isa = PBXGroup;
+			children = (
+				BD5359C628687A610074D213 /* Implementation */,
+				BD5359CF28687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift */,
+				BD5359D028687A610074D213 /* QuestionAnswering.swift */,
+			);
+			path = QuestionAnswering;
+			sourceTree = "<group>";
+		};
+		BD5359C628687A610074D213 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				BD5359C728687A610074D213 /* BERT */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		BD5359C728687A610074D213 /* BERT */ = {
+			isa = PBXGroup;
+			children = (
+				BD5359C828687A610074D213 /* QuestionAnsweringBERT.swift */,
+				BD5359C928687A610074D213 /* BERTInput.swift */,
+				BD5359CA28687A610074D213 /* BERTQAFP16.mlmodel */,
+				BD5359CB28687A610074D213 /* bert-base-uncased-vocab.txt */,
+				BD5359CC28687A610074D213 /* BERTOutput.swift */,
+				BD5359CD28687A610074D213 /* BERTVocabulary.swift */,
+				BD5359CE28687A610074D213 /* TokenizedString.swift */,
+			);
+			path = BERT;
+			sourceTree = "<group>";
+		};
 		BD700C83280C18C600504EC9 /* BrainMaintenance */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,6 +1012,7 @@
 		BDC511CF28423C7E00B96814 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				BD5359C528687A610074D213 /* QuestionAnswering */,
 				BDB50BEB28453BAE001DBD9C /* FilterActionActivityDefault.swift */,
 				BDB50BED28453BB5001DBD9C /* MapperSignalToEventActivityDefault.swift */,
 				BDB50BE928453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift */,
@@ -1177,6 +1246,7 @@
 				87595BCE2792F47E00BFE09C /* Localizable.strings in Resources */,
 				87595BDA2792F47E00BFE09C /* OpenSans-Regular.ttf in Resources */,
 				87595BD02792F47E00BFE09C /* OpenSans-SemiBold.ttf in Resources */,
+				BD5359DC28687A610074D213 /* bert-base-uncased-vocab.txt in Resources */,
 				87595BF32792F48A00BFE09C /* QuestionAnswerView.xib in Resources */,
 				87595BCF2792F47E00BFE09C /* Assets.xcassets in Resources */,
 				87595BCD2792F47E00BFE09C /* LaunchScreen.storyboard in Resources */,
@@ -1216,6 +1286,7 @@
 				BDE494C0284CA85C00FC5054 /* Localizable.strings in Resources */,
 				BDE494C1284CA85C00FC5054 /* OpenSans-Regular.ttf in Resources */,
 				BDE494C2284CA85C00FC5054 /* OpenSans-SemiBold.ttf in Resources */,
+				BD5359DA28687A610074D213 /* bert-base-uncased-vocab.txt in Resources */,
 				BDE494C3284CA85C00FC5054 /* QuestionAnswerView.xib in Resources */,
 				BDE494C4284CA85C00FC5054 /* Assets.xcassets in Resources */,
 				BDE494C5284CA85C00FC5054 /* LaunchScreen.storyboard in Resources */,
@@ -1241,6 +1312,7 @@
 				BDE49520284CA86300FC5054 /* Localizable.strings in Resources */,
 				BDE49521284CA86300FC5054 /* OpenSans-Regular.ttf in Resources */,
 				BDE49522284CA86300FC5054 /* OpenSans-SemiBold.ttf in Resources */,
+				BD5359DB28687A610074D213 /* bert-base-uncased-vocab.txt in Resources */,
 				BDE49523284CA86300FC5054 /* QuestionAnswerView.xib in Resources */,
 				BDE49524284CA86300FC5054 /* Assets.xcassets in Resources */,
 				BDE49525284CA86300FC5054 /* LaunchScreen.storyboard in Resources */,
@@ -1257,11 +1329,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5359E228687A610074D213 /* BERTVocabulary.swift in Sources */,
+				BD5359E528687A610074D213 /* TokenizedString.swift in Sources */,
 				BDB50BEC28453BAE001DBD9C /* FilterActionActivityDefault.swift in Sources */,
 				BD43A9D6279D8291009B21BB /* BrainContextDefault.swift in Sources */,
 				BDB50BEA28453BA8001DBD9C /* RepresentationOfEventActivityDefault.swift in Sources */,
 				BD43A9C6279D773A009B21BB /* APIRouter.swift in Sources */,
 				BDA77D3A282FD93600ABA8D9 /* QuestionAnswerPresenterDefault.swift in Sources */,
+				BD5359D328687A610074D213 /* QuestionAnsweringBERT.swift in Sources */,
 				BDAE82C02832612F00086520 /* ProcessStatusDefault.swift in Sources */,
 				BDA77D37282FD86B00ABA8D9 /* QuestionAnswerProtocols.swift in Sources */,
 				BD43A99E279D6D4F009B21BB /* EnvironmentArchitecture.swift in Sources */,
@@ -1278,6 +1353,7 @@
 				BDC511E328438E9500B96814 /* EnvironmenVIPERDefault.swift in Sources */,
 				87595C052792F78700BFE09C /* MainRouter.swift in Sources */,
 				BD43A9AF279D772D009B21BB /* GenericError.swift in Sources */,
+				BD5359D928687A610074D213 /* BERTQAFP16.mlmodel in Sources */,
 				BDC511E52843902000B96814 /* EnvironmentVIPER.swift in Sources */,
 				BDC511DA28423D6B00B96814 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BDC511DC28423D6B00B96814 /* LearningReactiveActivityDefault.swift in Sources */,
@@ -1301,6 +1377,7 @@
 				BD700C8B280C18C600504EC9 /* BrainMaintenanceDefault.swift in Sources */,
 				BD43A9C3279D773A009B21BB /* APIClientDefault.swift in Sources */,
 				BD43A9C4279D773A009B21BB /* APIClient.swift in Sources */,
+				BD5359D628687A610074D213 /* BERTInput.swift in Sources */,
 				BD9E1F7927A873C8009CB532 /* MemoryLayerDefault .swift in Sources */,
 				BDC511CC2842384D00B96814 /* CausalProcessDefault.swift in Sources */,
 				BDB50BF02845407E001DBD9C /* ActionProcessDefault.swift in Sources */,
@@ -1311,15 +1388,18 @@
 				BDC511D928423D6B00B96814 /* InductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BD9E1F7627A873C8009CB532 /* ReactiveLayerDefault.swift in Sources */,
 				BD43A9C5279D773A009B21BB /* APIRoutable.swift in Sources */,
+				BD5359DF28687A610074D213 /* BERTOutput.swift in Sources */,
 				BDC511CA2842384D00B96814 /* LearningReactiveProcessDefault.swift in Sources */,
 				BD700C8E280C306100504EC9 /* PerceptionProcessDefault.swift in Sources */,
 				BD700C90280D772200504EC9 /* PerceptionLayer.swift in Sources */,
 				87595C0C2794212900BFE09C /* BaseViperProtocols.swift in Sources */,
+				BD5359E828687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift in Sources */,
 				BDAE82BE283259C200086520 /* ReactiveLayer.swift in Sources */,
 				BDC511DB28423D6B00B96814 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */,
 				87595C042792F78700BFE09C /* MainRouterDefault.swift in Sources */,
 				BDC511CD2842384D00B96814 /* ReasoningReactiveProcessDefault.swift in Sources */,
 				87595B832792F2EB00BFE09C /* SceneDelegate.swift in Sources */,
+				BD5359EB28687A610074D213 /* QuestionAnswering.swift in Sources */,
 				BDD5EF0A2839084100BC97AF /* WeakArray.swift in Sources */,
 				87595C132794253800BFE09C /* ProcessKModel.swift in Sources */,
 				BDB0DF4B281FEE89001BFE5B /* Process+extension.swift in Sources */,
@@ -1349,11 +1429,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5359E028687A610074D213 /* BERTVocabulary.swift in Sources */,
+				BD5359E328687A610074D213 /* TokenizedString.swift in Sources */,
 				BDE49470284CA85C00FC5054 /* FilterActionActivityDefault.swift in Sources */,
 				BDE49471284CA85C00FC5054 /* BrainContextDefault.swift in Sources */,
 				BDE49472284CA85C00FC5054 /* RepresentationOfEventActivityDefault.swift in Sources */,
 				BDE49473284CA85C00FC5054 /* APIRouter.swift in Sources */,
 				BDE49474284CA85C00FC5054 /* QuestionAnswerPresenterDefault.swift in Sources */,
+				BD5359D128687A610074D213 /* QuestionAnsweringBERT.swift in Sources */,
 				BDE49475284CA85C00FC5054 /* ProcessStatusDefault.swift in Sources */,
 				BDE49476284CA85C00FC5054 /* QuestionAnswerProtocols.swift in Sources */,
 				BDE49477284CA85C00FC5054 /* EnvironmentArchitecture.swift in Sources */,
@@ -1370,6 +1453,7 @@
 				BDE49482284CA85C00FC5054 /* EnvironmenVIPERDefault.swift in Sources */,
 				BDE49483284CA85C00FC5054 /* MainRouter.swift in Sources */,
 				BDE49484284CA85C00FC5054 /* GenericError.swift in Sources */,
+				BD5359D728687A610074D213 /* BERTQAFP16.mlmodel in Sources */,
 				BDE49485284CA85C00FC5054 /* EnvironmentVIPER.swift in Sources */,
 				BDE49486284CA85C00FC5054 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BDE49487284CA85C00FC5054 /* LearningReactiveActivityDefault.swift in Sources */,
@@ -1393,6 +1477,7 @@
 				BDE49499284CA85C00FC5054 /* BrainMaintenanceDefault.swift in Sources */,
 				BDE4949A284CA85C00FC5054 /* APIClientDefault.swift in Sources */,
 				BDE4949B284CA85C00FC5054 /* APIClient.swift in Sources */,
+				BD5359D428687A610074D213 /* BERTInput.swift in Sources */,
 				BDE4949C284CA85C00FC5054 /* MemoryLayerDefault .swift in Sources */,
 				BDE4949D284CA85C00FC5054 /* CausalProcessDefault.swift in Sources */,
 				BDE4949E284CA85C00FC5054 /* ActionProcessDefault.swift in Sources */,
@@ -1403,15 +1488,18 @@
 				BDE494A3284CA85C00FC5054 /* InductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BDE494A4284CA85C00FC5054 /* ReactiveLayerDefault.swift in Sources */,
 				BDE494A5284CA85C00FC5054 /* APIRoutable.swift in Sources */,
+				BD5359DD28687A610074D213 /* BERTOutput.swift in Sources */,
 				BDE494A6284CA85C00FC5054 /* LearningReactiveProcessDefault.swift in Sources */,
 				BDE494A7284CA85C00FC5054 /* PerceptionProcessDefault.swift in Sources */,
 				BDE494A8284CA85C00FC5054 /* PerceptionLayer.swift in Sources */,
 				BDE494A9284CA85C00FC5054 /* BaseViperProtocols.swift in Sources */,
+				BD5359E628687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift in Sources */,
 				BDE494AA284CA85C00FC5054 /* ReactiveLayer.swift in Sources */,
 				BDE494AB284CA85C00FC5054 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */,
 				BDE494AC284CA85C00FC5054 /* MainRouterDefault.swift in Sources */,
 				BDE494AD284CA85C00FC5054 /* ReasoningReactiveProcessDefault.swift in Sources */,
 				BDE494AE284CA85C00FC5054 /* SceneDelegate.swift in Sources */,
+				BD5359E928687A610074D213 /* QuestionAnswering.swift in Sources */,
 				BDE494AF284CA85C00FC5054 /* WeakArray.swift in Sources */,
 				BDE494B0284CA85C00FC5054 /* ProcessKModel.swift in Sources */,
 				BDE494B1284CA85C00FC5054 /* Process+extension.swift in Sources */,
@@ -1425,11 +1513,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5359E128687A610074D213 /* BERTVocabulary.swift in Sources */,
+				BD5359E428687A610074D213 /* TokenizedString.swift in Sources */,
 				BDE494D0284CA86300FC5054 /* FilterActionActivityDefault.swift in Sources */,
 				BDE494D1284CA86300FC5054 /* BrainContextDefault.swift in Sources */,
 				BDE494D2284CA86300FC5054 /* RepresentationOfEventActivityDefault.swift in Sources */,
 				BDE494D3284CA86300FC5054 /* APIRouter.swift in Sources */,
 				BDE494D4284CA86300FC5054 /* QuestionAnswerPresenterDefault.swift in Sources */,
+				BD5359D228687A610074D213 /* QuestionAnsweringBERT.swift in Sources */,
 				BDE494D5284CA86300FC5054 /* ProcessStatusDefault.swift in Sources */,
 				BDE494D6284CA86300FC5054 /* QuestionAnswerProtocols.swift in Sources */,
 				BDE494D7284CA86300FC5054 /* EnvironmentArchitecture.swift in Sources */,
@@ -1446,6 +1537,7 @@
 				BDE494E2284CA86300FC5054 /* EnvironmenVIPERDefault.swift in Sources */,
 				BDE494E3284CA86300FC5054 /* MainRouter.swift in Sources */,
 				BDE494E4284CA86300FC5054 /* GenericError.swift in Sources */,
+				BD5359D828687A610074D213 /* BERTQAFP16.mlmodel in Sources */,
 				BDE494E5284CA86300FC5054 /* EnvironmentVIPER.swift in Sources */,
 				BDE494E6284CA86300FC5054 /* DeductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BDE494E7284CA86300FC5054 /* LearningReactiveActivityDefault.swift in Sources */,
@@ -1469,6 +1561,7 @@
 				BDE494F9284CA86300FC5054 /* BrainMaintenanceDefault.swift in Sources */,
 				BDE494FA284CA86300FC5054 /* APIClientDefault.swift in Sources */,
 				BDE494FB284CA86300FC5054 /* APIClient.swift in Sources */,
+				BD5359D528687A610074D213 /* BERTInput.swift in Sources */,
 				BDE494FC284CA86300FC5054 /* MemoryLayerDefault .swift in Sources */,
 				BDE494FD284CA86300FC5054 /* CausalProcessDefault.swift in Sources */,
 				BDE494FE284CA86300FC5054 /* ActionProcessDefault.swift in Sources */,
@@ -1479,15 +1572,18 @@
 				BDE49503284CA86300FC5054 /* InductiveReasoningReactiveActivityDefault.swift in Sources */,
 				BDE49504284CA86300FC5054 /* ReactiveLayerDefault.swift in Sources */,
 				BDE49505284CA86300FC5054 /* APIRoutable.swift in Sources */,
+				BD5359DE28687A610074D213 /* BERTOutput.swift in Sources */,
 				BDE49506284CA86300FC5054 /* LearningReactiveProcessDefault.swift in Sources */,
 				BDE49507284CA86300FC5054 /* PerceptionProcessDefault.swift in Sources */,
 				BDE49508284CA86300FC5054 /* PerceptionLayer.swift in Sources */,
 				BDE49509284CA86300FC5054 /* BaseViperProtocols.swift in Sources */,
+				BD5359E728687A610074D213 /* QuestionAnsweringReactiveActivityDefault.swift in Sources */,
 				BDE4950A284CA86300FC5054 /* ReactiveLayer.swift in Sources */,
 				BDE4950B284CA86300FC5054 /* SynthesisReasoningReactiveActivityDefault.swift in Sources */,
 				BDE4950C284CA86300FC5054 /* MainRouterDefault.swift in Sources */,
 				BDE4950D284CA86300FC5054 /* ReasoningReactiveProcessDefault.swift in Sources */,
 				BDE4950E284CA86300FC5054 /* SceneDelegate.swift in Sources */,
+				BD5359EA28687A610074D213 /* QuestionAnswering.swift in Sources */,
 				BDE4950F284CA86300FC5054 /* WeakArray.swift in Sources */,
 				BDE49510284CA86300FC5054 /* ProcessKModel.swift in Sources */,
 				BDE49511284CA86300FC5054 /* Process+extension.swift in Sources */,

@@ -80,6 +80,10 @@ protocol ProblemSolvingReasoningReactiveActivity: Activity {
     
 }
 
+protocol QuestionAnsweringReactiveActivity: Activity {
+    
+}
+
 protocol SynthesisReasoningReactiveActivity: Activity {
     
 }
@@ -109,6 +113,10 @@ protocol InductiveReasoningReactiveModel: ActivityModel {
 }
 
 protocol ProblemSolvingReasoningReactiveModel: ActivityModel {
+    
+}
+
+protocol QuestionAnsweringModel: ActivityModel {
     
 }
 

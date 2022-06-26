@@ -4,7 +4,7 @@
 //  Created by Miguel Gutierrez on 10/01/2022
 //
 // Default implementation of ProblemSolvingReasoningReactiveActivity
-
+// For now, I include FindAnswer BERT
 // MARK: - ProblemSolvingReasoningReactiveActivityDefault
 class ProblemSolvingReasoningReactiveActivityDefault {
     var activityModels: [ActivityModel]

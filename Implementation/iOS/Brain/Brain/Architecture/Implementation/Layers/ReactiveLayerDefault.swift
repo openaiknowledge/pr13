@@ -42,6 +42,7 @@ extension ReactiveLayerDefault {
         let deductiveReasoningActivity = DeductiveReasoningReactiveActivityDefault.build()
         let inductiveReasoningActivity = InductiveReasoningReactiveActivityDefault.build()
         let problemSolvingReasoningActivity = ProblemSolvingReasoningReactiveActivityDefault.build()
+        let questionAnsweringActivity = QuestionAnsweringReactiveActivityDefault.build()
         let synthesisReasoningActivity = SynthesisReasoningReactiveActivityDefault.build()
         let learningActivity = LearningReactiveActivityDefault.build()
         
@@ -51,13 +52,16 @@ extension ReactiveLayerDefault {
                                       deductiveReasoningActivity,
                                       inductiveReasoningActivity,
                                       problemSolvingReasoningActivity,
+                                      questionAnsweringActivity,
                                       synthesisReasoningActivity,
                                       learningActivity]
                 
         let nextLayers: [Layer] = [actionLayer,
                                    memoryLayer]
         
-        let causalProcess = CausalProcessDefault.build(with: [causalReasoningActivity, problemSolvingReasoningActivity], nextProcess: [])
+        let causalProcess = CausalProcessDefault.build(with:
+                [causalReasoningActivity, problemSolvingReasoningActivity, questionAnsweringActivity],
+                                                       nextProcess: [])
 
         let reasoningProcess = ReasoningReactiveProcessDefault.build(with: [deductiveReasoningActivity, inductiveReasoningActivity, synthesisReasoningActivity], nextProcess: [])
 

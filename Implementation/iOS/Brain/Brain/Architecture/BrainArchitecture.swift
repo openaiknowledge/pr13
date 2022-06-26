@@ -90,6 +90,11 @@ protocol SymbolicModel: KModel {
 protocol LogicModel: KModel {
     
 }
+
+protocol ModelProviding {
+    var model: KModel? { get }
+}
+
 // Embedding represents relatively low-dimensional space into which you can translate high-dimensional vectors
 // TODO
 protocol EmbeddingModel: KModel {

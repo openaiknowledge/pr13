@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87595B7C2792F2EB00BFE09C"
-               BuildableName = "Brain PRO.app"
+               BuildableName = "Brain.app"
                BlueprintName = "Brain"
                ReferencedContainer = "container:Brain.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87595B922792F2ED00BFE09C"
-               BuildableName = "BrainTest.xctest"
+               BuildableName = "BrainTests.xctest"
                BlueprintName = "BrainTests"
                ReferencedContainer = "container:Brain.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87595B9D2792F2ED00BFE09C"
-               BuildableName = "BrainUITest.xctest"
+               BuildableName = "BrainUITests.xctest"
                BlueprintName = "BrainUITests"
                ReferencedContainer = "container:Brain.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87595B7C2792F2EB00BFE09C"
-            BuildableName = "Brain PRO.app"
+            BuildableName = "Brain.app"
             BlueprintName = "Brain"
             ReferencedContainer = "container:Brain.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87595B7C2792F2EB00BFE09C"
-            BuildableName = "Brain PRO.app"
+            BuildableName = "Brain.app"
             BlueprintName = "Brain"
             ReferencedContainer = "container:Brain.xcodeproj">
          </BuildableReference>

@@ -6,6 +6,7 @@
 //  Default implementation of DecisionReactive processes
 //
 import Foundation
+import Logging
 
 // MARK: - DecisionReactiveProcessDefault
 // is executing after representation and it is waiting results of other process
@@ -79,7 +80,7 @@ extension DecisionReactiveProcessDefault {
 extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
     /* execute processToControl and decide which is the best signal to inform to nextLayer
         it can be executed by:
-            - fromProcess == nil -> main process
+            - fromProcess == RepresentationReactiveProcessDefault
             - fromProcess:
                  case CausalProcess
                  case ReasoningReactiveProcess
@@ -89,23 +90,25 @@ extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process?) {
         self.fromLayer = fromLayer
         startTimeOfProcess = Date()
-        /* todo testing
+        
+        Logger(label: String(describing: self)).info("exec signal: \(signal) fromProcess: \(fromProcess)")
+
         DispatchQueue(label: self.queueName).async { [weak self] in
             guard let self = self else { return }
             switch fromProcess {
-            case _ where fromProcess == nil:
+            case _ where fromProcess is RepresentationReactiveProcessDefault:
                 self.mainExec(signal: signal, fromLayer: fromLayer)
                 break
             case _ where fromProcess is CausalProcess:
-                self.execFromCausal(signal: signal, fromLayer: fromLayer)
+                self.exececutedFromCausal(signal: signal, fromLayer: fromLayer)
             case _ where fromProcess is ReasoningReactiveProcess:
-                self.execFromReasoning(signal: signal, fromLayer: fromLayer)
+                self.executedFromReasoning(signal: signal, fromLayer: fromLayer)
             case _ where fromProcess is LearningReactiveProcess:
-                self.execFromLearning(signal: signal, fromLayer: fromLayer)
+                self.executedFromLearning(signal: signal, fromLayer: fromLayer)
             default: break
             }
         }
-         */
+         
         /*
             infinite until DecisionActivity return a signal (it controls limit time)
             use Timer to execute each time incrementally
@@ -118,6 +121,9 @@ extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
 // MARK: timer and execDecisionActivity
 private extension DecisionReactiveProcessDefault {
     @objc func fireDecision() {
+        
+        Logger(label: String(describing: self)).info("fireDecision")
+
         invalidateTimer()
         
         guard let fromLayer = fromLayer else { return }
@@ -125,6 +131,8 @@ private extension DecisionReactiveProcessDefault {
         // check best decision
         if let signal = self.execDecisionActivity() {
             
+            Logger(label: String(describing: self)).info("fireDecision - signal: \(signal)")
+
             self.nextLayers.forEach {
                 if let layer = $0() {
                     layer.signal(signal, fromLayer: fromLayer, fromProcess: self)
@@ -155,25 +163,30 @@ private extension DecisionReactiveProcessDefault {
 }
 private extension DecisionReactiveProcessDefault {
     func mainExec(signal: Signal, fromLayer: Layer) {
-        
+        Logger(label: String(describing: self)).info("mainExec\(signal) \(processToControl)")
+
         self.processToControl.forEach {
             $0.exec(signal: signal, fromLayer: fromLayer, fromProcess: self)
         }
 
     }
-    func execFromCausal(signal: Signal, fromLayer: Layer) {
+    func exececutedFromCausal(signal: Signal, fromLayer: Layer) {
+        Logger(label: String(describing: self)).info("execFromCausal\(signal)")
+        // TODO: check if it has enought confidence or it is revolved in other moment?
+        append(signal: signal)
+    }
+    
+    func executedFromReasoning(signal: Signal, fromLayer: Layer) {
         
     }
     
-    func execFromReasoning(signal: Signal, fromLayer: Layer) {
-        
-    }
-    
-    func execFromLearning(signal: Signal, fromLayer: Layer) {
+    func executedFromLearning(signal: Signal, fromLayer: Layer) {
         
     }
     
     func execDecisionActivity() -> Signal? {
+        Logger(label: String(describing: self)).info("execDecisionActivity \(activities.first?())")
+
         guard let decisionActivity = activities.first?() as? DecisionReactiveActivity else { return nil }
         
         guard let fromLayer = fromLayer else { return nil}
