@@ -50,6 +50,7 @@ private extension QuestionAnswerViewController {
 }
 // MARK: - EnvironmentView
 extension QuestionAnswerViewController: EnvironmentView {
+    
     func show(text: String) {
         answerTextView.text = text
 //        showAlertController(titleAction: "TESTING", descriptionAction: text, titleOne: "Cancel", titleSecond: "OK")
@@ -58,5 +59,7 @@ extension QuestionAnswerViewController: EnvironmentView {
     func show(image: UIImage) {
 //         TODO
     }
-    
+    func clean() {
+        answerTextView.text = nil        
+    }
 }

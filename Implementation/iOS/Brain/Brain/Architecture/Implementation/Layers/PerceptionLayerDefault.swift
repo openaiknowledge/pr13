@@ -80,16 +80,7 @@ extension MapperEventToSignalActivityDefault: MapperEventToSignalActivity {
     
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
-        var messages = signal.messages
-        let encoding = BrainDataDefault.Constants.txtEncodingDefault
-        guard let data = "MapperEventToSignalActivityDefault".data(using: encoding) else {
-            return signal
-        }
-        let brainData = BrainDataDefault(type: .text, encoding: .txt(encoding), data:  data)
-        
-        messages.append(brainData)
-        let processStatus = ProcessStatusDefault.running
-        return SignalDefault(messages: messages, processStatus: [processStatus])
+        return signal
     }
 }
 // MARK: - build
@@ -114,16 +105,7 @@ extension RepresentationOfSignaltActivityDefault: RepresentationOfSignaltActivit
     
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
-        var messages = signal.messages
-        let encoding = BrainDataDefault.Constants.txtEncodingDefault
-        guard let data = "RepresentationOfSignaltActivityDefault".data(using: encoding) else {
-            return signal
-        }
-        let brainData = BrainDataDefault(type: .text, encoding: .txt(encoding), data:  data)
-        
-        messages.append(brainData)
-        let processStatus = ProcessStatusDefault.running
-        return SignalDefault(messages: messages, processStatus: [processStatus])
+       return signal
     }
 }
 // MARK: - build
@@ -147,16 +129,7 @@ extension FilterPerceptionActivityDefault: FilterPerceptionActivity {
 
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process) -> Signal? {
 //        TODO
-        var messages = signal.messages
-        let encoding = BrainDataDefault.Constants.txtEncodingDefault
-        guard let data = "FilterPerceptionActivityDefault".data(using: encoding) else {
-            return signal
-        }
-        let brainData = BrainDataDefault(type: .text, encoding: .txt(encoding), data:  data)
-        
-        messages.append(brainData)
-        let processStatus = ProcessStatusDefault.running
-        return SignalDefault(messages: messages, processStatus: [processStatus])
+        return signal
         
     }
 }

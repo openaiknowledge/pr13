@@ -24,6 +24,7 @@ struct BrainDataDefault: BrainData {
         case image
         case text
         case sound // voice?
+        case json(Decodable)
     }
 
     enum ImageType {
@@ -45,11 +46,20 @@ struct BrainDataDefault: BrainData {
 extension String.Encoding {
     
 }
+
 extension BrainDataDefault {
     var txt: String? {
         switch self.encoding {
         case .txt(let encoding):
             return String(data: data, encoding: encoding)
+        default:
+            return nil
+        }
+    }
+    var json: Any? {
+        switch self.encoding {
+        case .json: // TODO: think about this
+            return data.map()
         default:
             return nil
         }

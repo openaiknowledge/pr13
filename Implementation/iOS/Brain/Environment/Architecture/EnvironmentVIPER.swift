@@ -11,6 +11,7 @@ import UIKit
 protocol EnvironmentView: VIPERView {
     func show(image: UIImage)
     func show(text: String)
+    func clean()
 }
 
 protocol EnvironmentPresenter: Presenter {

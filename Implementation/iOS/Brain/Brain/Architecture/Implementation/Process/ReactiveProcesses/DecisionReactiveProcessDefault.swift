@@ -75,6 +75,13 @@ extension DecisionReactiveProcessDefault {
             self?.signals_.append(signal)
         }
     }
+    func reset() {
+        status = ProcessStatusDefault.idle
+        signals_ = [Signal]()
+        invalidateTimer()
+        startTimeOfProcess = nil
+
+    }
 }
 
 extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
@@ -88,9 +95,10 @@ extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
             -
     */
     func exec(signal: Signal, fromLayer: Layer, fromProcess: Process?) {
+        reset()
         self.fromLayer = fromLayer
         startTimeOfProcess = Date()
-        
+
         Logger(label: String(describing: self)).info("exec signal: \(signal) fromProcess: \(fromProcess)")
 
         DispatchQueue(label: self.queueName).async { [weak self] in
@@ -122,7 +130,7 @@ extension DecisionReactiveProcessDefault: DecisionReactiveProcess {
 private extension DecisionReactiveProcessDefault {
     @objc func fireDecision() {
         
-        Logger(label: String(describing: self)).info("fireDecision")
+        Logger(label: String(describing: self)).info("fireDecision - 1")
 
         invalidateTimer()
         
@@ -131,8 +139,11 @@ private extension DecisionReactiveProcessDefault {
         // check best decision
         if let signal = self.execDecisionActivity() {
             
-            Logger(label: String(describing: self)).info("fireDecision - signal: \(signal)")
+            Logger(label: String(describing: self)).info("fireDecision - 2  signal: \(signal)")
 
+            if let message = signal.messages.first as? BrainDataDefault {
+                Logger(label: String(describing: self)).info("fireDecision - 3 message: \(message.txt)")
+            }
             self.nextLayers.forEach {
                 if let layer = $0() {
                     layer.signal(signal, fromLayer: fromLayer, fromProcess: self)

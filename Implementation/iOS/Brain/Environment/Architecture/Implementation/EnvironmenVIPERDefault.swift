@@ -67,6 +67,7 @@ extension EnvironmentPresenterDefault: EnvironmentPresenter {
     }
     
     func execute(text: String) {
+        view?.clean()
         sightController.input(text: text)
     }
     

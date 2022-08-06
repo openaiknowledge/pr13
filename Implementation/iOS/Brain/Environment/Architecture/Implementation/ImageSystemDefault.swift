@@ -22,7 +22,7 @@ extension ImageOutputControllerDefault: ImageOutputController {
             switch brainData.encoding {
             case .txt(let encoding):
                 if let text = String(data: brainData.data, encoding: encoding) {
-                    show(text: text)
+                     show(text: text)
                 }
             case .image(let imageType):
                 break

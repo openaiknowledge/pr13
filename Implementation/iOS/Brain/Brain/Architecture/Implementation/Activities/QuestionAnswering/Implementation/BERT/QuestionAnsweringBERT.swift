@@ -23,8 +23,10 @@ class QuestionAnsweringBERT {
 }
 // MARK: - QuestionAnsweringBERT
 extension QuestionAnsweringBERT: QuestionAnswering {
-    func findAnswer(to question: Question) -> Answer? {        
-        Logger(label: String(describing: self)).info("findAnswer to: \(question)")
+    func findAnswer(to question: Question) -> Answer? {
+        if let questionDocument = (question.data as? BrainDataDefault)?.json as? QuestionDocument {
+            Logger(label: String(describing: self)).info("findAnswer to: \(questionDocument.question)")
+        }
         
         guard let data = question.data as? BrainDataDefault,
               let questionDocument = data.data.map() else { return nil }
